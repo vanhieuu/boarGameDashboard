@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "board-game",
-    "slug": "board-game",
+    "name": "Miền Ngược",
+    "slug": "MienNguoc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,16 +18,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dieutrang.boardgame"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.dieutrang.boardgame"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "388e8e81-ce69-4851-b733-5d1bb1623084"
+      }
     }
   }
 }

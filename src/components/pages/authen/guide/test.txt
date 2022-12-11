@@ -1,0 +1,55 @@
+ <View
+          style={{
+            flex: 1,
+            width: "100%",
+            flexDirection: "row",
+            alignItems: "flex-end",
+          }}
+        >
+          <View style={styles.rootView}>
+            <View style={styles.rowCenterView}>
+              <LocationSquare
+                bottom={true}
+                // right={true}
+                images={images.startSquare}
+                onPress={() => {
+                  console.log("Đây là cái nhà");
+                }}
+              />
+              <NormalSquares bottom={true} left={true} />
+            </View>
+            <View style={styles.rowCenterView}>
+              <NormalSquares right={true} />
+              <NormalSquares bottom={true} left={true} />
+            </View>
+            <View style={styles.rowCenterView}>
+              <NormalSquares right={true} bottom={true} />
+              <NormalSquares left={true} bottom={true} />
+            </View>
+            <View style={styles.rowCenterView}>
+              <NormalSquares right={true} />
+              <NormalSquares left={true} right={true} />
+            </View>
+          </View>
+
+          <View>
+            <View style={{ marginRight: 100 }}>
+              <NormalSquares bottom={true} />
+              <NormalSquares bottom={true} top={true} right={true} />
+
+              <LocationSquare
+                bottom={true}
+                top={true}
+                images={images.startSquare}
+                onPress={() => {
+                  console.log("Đây là cái chợ");
+                }}
+              />
+            </View>
+
+            <View style={styles.rowCenterView}>
+              <NormalSquares right={true} />
+              <NormalSquares right={true} />
+            </View>
+          </View>
+        </View>
