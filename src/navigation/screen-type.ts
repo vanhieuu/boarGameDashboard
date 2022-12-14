@@ -1,3 +1,5 @@
+import { Characters } from "../ultils/type"
+
 export enum APP_SCREEN  {
     SPLASH = 'SPLASH',
     HOME_PAGE = 'HOME_PAGE',
@@ -20,7 +22,9 @@ export type BottomTabParamsList = {
 }
 
 export type AuthenScreenParamsList = {
-    [APP_SCREEN.DETAILS_CHARACTERS]:undefined,
+    [APP_SCREEN.DETAILS_CHARACTERS]:{
+        characters:Characters
+    },
     [APP_SCREEN.DETAIL_ITEMS]:undefined,
     [APP_SCREEN.THIRD_DIMENSION_MODAL_VIEW]:undefined,
     [APP_SCREEN.BOTTOM_TAB]:undefined

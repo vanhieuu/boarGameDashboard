@@ -18,6 +18,8 @@ export const ColorDefault = {
     text: '#000',
     border: '#ccc',
     notification: '#3e3e3e',
+    searchBar:'#64632C',
+    textTab:"#292763"
 }
 
 
@@ -41,4 +43,5 @@ export const ColorDark = {
     text: '#000',
     border: '#ccc',
     notification: '#3e3e3e',
+    searchBar:'#64632C',textTab:"#292763"
 }

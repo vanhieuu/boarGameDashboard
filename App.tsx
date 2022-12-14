@@ -1,22 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import RootNavigator from './src/navigation/root-navigatior';
+import { StatusBar } from "expo-status-bar";
+
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Provider } from "react-redux";
+import { store } from "./src/assets/store/store";
+import RootNavigator from "./src/navigation/root-navigatior";
 
 export default function App() {
   return (
-    <SafeAreaProvider style={{flex:1}}>
-      <StatusBar   style='light'/>
-     <RootNavigator/>
-    </SafeAreaProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider style={{ flex: 1 }}>
+        <Provider store={store}>
+          <StatusBar style="light" />
+          <RootNavigator />
+        </Provider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

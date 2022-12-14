@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Miền Ngược",
-    "slug": "MienNguoc",
+    "slug": "board-game",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

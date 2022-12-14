@@ -27,7 +27,8 @@ const TabItemsMolecules = ({
           styles(theme).txtItem,
           {
             color:
-              stateIndex === index ? theme.colors.primary : 'black',
+              stateIndex === index ? theme.colors.primary : theme.colors.textTab,
+              fontWeight:'bold'
           },
         ]}
       >

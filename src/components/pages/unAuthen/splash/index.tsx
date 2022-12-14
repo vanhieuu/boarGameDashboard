@@ -22,7 +22,7 @@ const SplashScreens = () => {
   const cloud1AnimationValue = useRef(new Animated.Value(0)).current;
   const cloud2AnimationValue = useRef(new Animated.Value(0)).current;
   const logoAnimatedValue = useRef(new Animated.Value(0)).current;
-console.log(width,height,'size',Platform.OS)
+
   useEffect(() => {
     Animated.timing(cloud1AnimationValue, {
       toValue: 1,
@@ -39,7 +39,9 @@ console.log(width,height,'size',Platform.OS)
       duration: 3000,
       useNativeDriver: true,
     }).start(() =>{
-     
+      setTimeout(() =>{
+        navigate(APP_SCREEN.AUTHEN)
+      },1000)
     });
   }, []);
 

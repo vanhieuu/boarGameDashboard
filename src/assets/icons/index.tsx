@@ -6,7 +6,9 @@ export const icons = {
     icHomeActive: require('./source/iconHomeActive.png'),
     icItemActive: require('./source/iconItemActive.png'),
     icUserActive: require('./source/iconCharActive.png'),
-    icWorldActive: require('./source/iconMapActive.png')
+    icWorldActive: require('./source/iconMapActive.png'),
+    iconSearch: require('./source/iconSearch.png'),
+    iconBack:require('./source/iconBack.png'),
 }
 
 
