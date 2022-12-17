@@ -38,7 +38,7 @@ const DetailCharactersScreen = () => {
         </TouchableOpacity>
 
         <View style={styles.titleView}>
-          <Text style={styles.textStyle}>Chi tiết nhân vật</Text>
+          <Text style={styles.textTitleStyle}>Chi tiết nhân vật</Text>
         </View>
       </View>
       <View style={styles.bodyView}>
@@ -90,9 +90,10 @@ const DetailCharactersScreen = () => {
                 style={[
                   styles.contentTitle,
                   {
-                    height: height > 800 ? 500 : 350,
-                    padding: 10,
+                    height: height > 800 ? 355 : 300,
                     marginBottom: 10,
+                    paddingTop: 4,
+                    paddingBottom: 30,
                   },
                 ]}
               >
@@ -112,10 +113,7 @@ const DetailCharactersScreen = () => {
                   styles.contentTitle,
                   {
                     height: height > 800 ? 200 : 180,
-                    // padding: 10,
-                    marginBottom: 20,
-                    paddingHorizontal: 10,
-                    // paddingBottom:20
+                    // marginBottom: 20,
                   },
                 ]}
                 alwaysBounceVertical={false}
@@ -164,10 +162,16 @@ const rootStyle = (theme: AppTheme) =>
       alignItems: "center",
     },
     textStyle: {
+      fontSize: 16,
+      fontWeight: "600",
+      lineHeight: 20,
+      fontFamily: "Roboto",
+    },
+    textTitleStyle: {
       fontSize: 18,
       fontWeight: "600",
       lineHeight: 20,
-      fontFamily: "Roboto-Medium",
+      fontFamily: "Roboto-Bold",
     },
     bodyView: { flex: 1, marginTop: 30 },
     characterView: {
@@ -197,12 +201,15 @@ const rootStyle = (theme: AppTheme) =>
       width: width / 2 - 20,
       height: 40,
       borderWidth: 2,
-      borderColor: theme.colors.red,
+      borderColor: theme.colors.darkBlue,
       marginBottom: 10,
     },
     titleOverview: { justifyContent: "center", alignItems: "center" },
     textOverview: {
       fontSize: 13.7,
       fontFamily: "Roboto-Light",
+      textAlign: "justify",
+      paddingHorizontal: 15,
+      paddingBottom: 5,
     },
   });

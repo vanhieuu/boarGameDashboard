@@ -11,7 +11,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider style={{ flex: 1 }}>
         <Provider store={store}>
-          <StatusBar style="light" />
+          <StatusBar style="dark" />
           <RootNavigator />
         </Provider>
       </SafeAreaProvider>

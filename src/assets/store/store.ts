@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import characters from './api/slice/characters'
-
-
+import items from './api/slice/item'
+import app from './api/slice/appSlice'
 
 export const store = configureStore({
     reducer:{
-        characters
+        characters,
+        items,
+        app
     }
 })
 export type RootState = ReturnType<typeof store.getState>

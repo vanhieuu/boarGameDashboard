@@ -5,6 +5,7 @@
         "id": "1",
         "name": "Đồng bạc",
         "type": "exchange",
+        "dataMienNguocId": "1",
         "image": "",
         "inSet": false,
         "function": "Để trao đổi vật phẩm"
@@ -13,6 +14,7 @@
         "id": "2",
         "name": "Đồng bạc",
         "type": "exchange",
+        "dataMienNguocId": "1",
         "image": "",
         "inSet": false,
         "function": "Để trao đổi vật phẩm"
@@ -21,92 +23,101 @@
         "id": "3",
         "name": "Đồng bạc",
         "type": "exchange",
+        "dataMienNguocId": "1",
         "image": "",
         "inSet": false,
         "function": "Để trao đổi vật phẩm"
       }
     ],
     "characters": [
-      {
-        "id": "1",
-        "name": "Nàng",
-        "type": "Chính diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1eKq44pq4vCDB2eT7oL0Jp6RaVHcROFGa",
-        "cover": "https://drive.google.com/uc?export=download&id=1ujK7uVUQJ8ue2vQyE6VKHs7Zb3zft1Ey",
-        "image": "https://drive.google.com/uc?export=download&id=1EV4HdwfWTBjqFEzWGJR4CuW2MTTomGCu",
-        "mission": " Vì Chàng không kịp về hỏi cưới Nàng ở bàn chơi “Chuyện Chàng”, Nàng tiếp tục là nhân vật chính đi thu thập tất cả những kỷ vật tình yêu để đem đến cho Chàng. Vật phẩm được thu thập nhờ sự trợ giúp của Chị gái và Chàng, mang đi trao đổi tại các Chợ phiên để có được kỷ vật. Nếu không thu thập được đủ trước thời gian quy định, Nàng không gặp được Chàng, câu chuyện (trò chơi) kết thúc. Trong Bàn chơi “Chuyện Nàng” sẽ cùng Nàng thu thập và trao đổi vật phẩm.",
-        "description": "Nàng là người bạn từ thuở còn trong lòng mẹ với Chàng, hai người quấn quýt, thương yêu nhau trong suốt thời xuân xanh. Nhưng tình yêu lại lỡ làng vì gia đình Nàng chê Chàng nghèo khổ mà không cho họ nên duyên vợ chồng. Và rồi Nàng phải theo lời cha mẹ sắp đặt, lấy chồng nơi xa, trải qua bao nỗi cơ cực khi về nhà chồng, vượt qua bao sóng gió để cuối cùng cũng được trở về bên Chàng dù cho đang là lúc tàn tạ nhất."
-      },
-      {
-        "id": "2",
-        "name": "Chàng",
-        "type": "Chính diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1FZ3MGIFGUeVueM7UHNdyH1QQz_0WLgDd",
-        "cover": "https://drive.google.com/uc?export=download&id=1-3p0wQ0c1NVGA6bhOKHacgYnvKD8eR0i",
-        "image": "https://drive.google.com/uc?export=download&id=1e6TtmO7yeW6wyYwfBbzUECtb7zZGpV8p",
-        "mission": "Chàng là nhân vật chính đi thu thập tất cả các lễ vật để đi hỏi cưới nàng theo đúng phong tục truyền thống. Vật phẩm được thu thập nhờ sự trợ giúp của Em trai và Mẹ chàng, mang đi trao đổi tại các Chợ phiên để có đủ lễ vật . Nếu không thu thập được đủ trước thời gian quy định, Chàng không kịp dâng lễ trước khi Nàng về nhà chồng, chuyện chuyển tiếp sang bàn chơi “Chuyện Nàng.”",
-        "description": "Chàng là chàng trai khôi ngô, cần mẫn, giàu ý chí đã sánh bước bên Nàng xinh đẹp, nết na từ thời thơ ấu. Vì mong ước được kết duyên với Nàng, nên khi bị nhà gái từ chối, Chàng phẫn chí quyết tâm lên đường đi làm ăn, cố gắng trở về giàu sang để lần nữa đem lễ vật đi hỏi cưới người con gái mình yêu. Sau bao ngày tháng bôn ba đất lạ, Chàng đã có của cải để trở về với Nàng."
-      },
-      {
-        "id": "3",
-        "name": "Em trai",
-        "type": "Chính diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1teBAmpQ3VVpb4xsutiTXUo2qNDM8CX1R",
-        "cover": "https://drive.google.com/uc?export=download&id=1bw279U_mPu-NmbkzapfyU0m_UUndtRh4",
-        "image": "https://drive.google.com/uc?export=download&id=153hOv38rhrxK8dgJyXyAzMqIyUc0tFa1",
-        "mission": "Em trai sẽ đồng hành cùng Chàng trong bàn chơi 'Chuyện Chàng', cùng Chàng thu thập và trao đổi vật phẩm để có đủ lễ vật hỏi cưới, đồng thời giúp Chàng ngăn chặn phe Phản diện đến quấy phá.",
-        "description": "Em trai là người anh em cùng đồng cam cộng khổ trong suốt hành trình đi làm ăn xa của Chàng. Đó là một trợ thủ đắc lực, đáng tin cậy, có thể giúp đỡ Chàng sớm thành công để trở về bên người thương nơi quê nhà"
-      },
-      {
-        "id": "4",
-        "name": "Mẹ chàng",
-        "type": "Chính diện",
-        "chess": "https://drive.google.com/uc?export=download&id=18bcRlSeMd05H8LkNlhHv5TRZkzXeR7bD",
-        "cover": "https://drive.google.com/uc?export=download&id=1oFZ-DPfyswtZHqa0PdQglk0NM43T2HJh",
-        "image": "https://drive.google.com/uc?export=download&id=1lKy0rp3hIG7ZMRtcIXTSYntHCNfG2065",
-        "description": "Đây là đấng sinh thành nên Chàng, một người mẹ tảo tần, không ngại khó ngại khổ, luôn là hậu phương vững chắc, ủng hộ cho Chàng có dũng khí thực hiện ước mơ của mình",
-        "mission": "Mẹ chàng sẽ đồng hành cùng Chàng trong bàn chơi <b>'Chuyện Chàng'</b>, cùng Chàng thu thập và trao đổi vật phẩm để có đủ lễ vật hỏi cưới, đồng thời giúp Chàng ngăn chặn phe Phản diện đến quấy phá"
-      },
-      {
-        "id": "5",
-        "name": "Chị gái",
-        "type": "Chính diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1Spukw8xetuBcfhDDWy8MKqSdlw5v8LR8",
-        "cover": "https://drive.google.com/uc?export=download&id=1trUG-VgBfa8OwZXhL1DL36guPADoUovI",
-        "image": "https://drive.google.com/uc?export=download&id=1vMU9D27LRS2GCi1Jbv7NxZb4jPMSZcFu",
-        "mission": "Chị gái sẽ đồng hành cùng Nàng trong bàn chơi “Chuyện Nàng”, cùng Nàng thu thập và trao đổi vật phẩm để lấy được kỷ vật tình yêu, đồng thời giúp Nàng ngăn chặn phe Phản diện đến quấy phá",
-        "description": "Đây là người chị gái cùng bản thân thiết với Nàng. Hai chị em đã luôn ở bên cạnh đỡ đần nhau, đặc biệt là trong khoảng thời gian theo nhà chồng gian nan, khốn khó của Nàng, Chị gái vẫn luôn âm thầm trợ giúp, chia sẻ những khó khăn với Nàng."
-      },
-      {
-        "id": "6",
-        "name": "Chồng 1",
-        "type": "Phản diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1RghWs3nFuVNpMUQQKnkj2H7WPq9NXJsW",
-        "cover": "https://drive.google.com/uc?export=download&id=1hlX1mqeIX_AgxqnYzZzPfw3kk0dLN8a9",
-        "image": "https://drive.google.com/uc?export=download&id=10-Yf9WuCOePq2TXexIWYRpOev9faJvlk",
-        "mission": "Người chồng thứ nhất này sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
-        "description": " Đây là người đầu tiên mà Nàng bị gả cho vì tưởng rằng người này giàu có, đáng tin. Thật không ngờ rằng “Khi chưa lấy nhau thì vồ vập/ Khi chưa đón về thì xun xoe/ Khi đã là dâu thì đuổi dâu xuống sàn ăn cám”. Nàng về nhà chồng chưa được bao lâu đã bị chồng hắt hủi, đánh đập và trả về lại cho nhà Nàng."
-      },
-      {
-        "id": "7",
-        "name": "Chồng 2",
-        "type": "Phản diện",
-        "chess": "https://drive.google.com/uc?export=download&id=1X-p9rcOm9U_4W24ZhZZ09mME9__7M1bZ",
-        "cover": "https://drive.google.com/uc?export=download&id=1hdkJ0lXyPMEZVH-J5mjMsySnuD0i2Wkt",
-        "image": "https://drive.google.com/uc?export=download&id=1X3oVROopc7uS43JMdF53Ibk2aRvJgB5Y",
-        "mission": "Người chồng thứ hai này sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
-        "description": "Đây là người thứ hai Nàng bị gả cho sau sự đổ vỡ với người chồng thứ nhất. Đã là lần thứ hai sang ngang nhưng Nàng vẫn sống trong đau khổ vì thương nhớ Chàng, do đó đã cố tình làm những việc quái gở để nhà chồng khinh ghét rồi bị chồng không chịu được đem bán ra Chợ."
-      },
-      {
-        "id": "8",
-        "name": "Bố chồng",
-        "type": "Phản diện",
-        "chess": "https://drive.google.com/uc?export=download&id=13yyUO0LACfqEXRIs6k5ridS7O0WwxPBx",
-        "cover": "https://drive.google.com/uc?export=download&id=1UC6WZs8VbVqkTOopsvld7DN1jFAdS0Jn",
-        "image": "https://drive.google.com/uc?export=download&id=1tDxc1iKSJfuAIuJG1OC3os7zUOSbfcmC",
-        "mission": "Bố chồng sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
-        "description": "Người đàn ông này là bố của người chồng thứ nhất, tính tình gia trưởng, hống hách, luôn khinh miệt và xui con trai đối xử thậm tệ với Nàng."
-      }
+        {
+          "id": "1",
+          "name": "Nàng",
+          "type": "Chính diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1eKq44pq4vCDB2eT7oL0Jp6RaVHcROFGa",
+          "cover": "https://drive.google.com/uc?export=download&id=1ujK7uVUQJ8ue2vQyE6VKHs7Zb3zft1Ey",
+          "image": "https://drive.google.com/uc?export=download&id=1EV4HdwfWTBjqFEzWGJR4CuW2MTTomGCu",
+          "mission": " Vì Chàng không kịp về hỏi cưới Nàng ở bàn chơi “Chuyện Chàng”, Nàng tiếp tục là nhân vật chính đi thu thập tất cả những kỷ vật tình yêu để đem đến cho Chàng. Vật phẩm được thu thập nhờ sự trợ giúp của Chị gái và Chàng, mang đi trao đổi tại các Chợ phiên để có được kỷ vật. Nếu không thu thập được đủ trước thời gian quy định, Nàng không gặp được Chàng, câu chuyện (trò chơi) kết thúc. Trong Bàn chơi “Chuyện Nàng” sẽ cùng Nàng thu thập và trao đổi vật phẩm.",
+          "description": "Nàng là người bạn từ thuở còn trong lòng mẹ với Chàng, hai người quấn quýt, thương yêu nhau trong suốt thời xuân xanh. Nhưng tình yêu lại lỡ làng vì gia đình Nàng chê Chàng nghèo khổ mà không cho họ nên duyên vợ chồng. Và rồi Nàng phải theo lời cha mẹ sắp đặt, lấy chồng nơi xa, trải qua bao nỗi cơ cực khi về nhà chồng, vượt qua bao sóng gió để cuối cùng cũng được trở về bên Chàng dù cho đang là lúc tàn tạ nhất."
+        },
+        {
+          "id": "2",
+          "name": "Chàng",
+          "type": "Chính diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1FZ3MGIFGUeVueM7UHNdyH1QQz_0WLgDd",
+          "cover": "https://drive.google.com/uc?export=download&id=1-3p0wQ0c1NVGA6bhOKHacgYnvKD8eR0i",
+          "image": "https://drive.google.com/uc?export=download&id=1e6TtmO7yeW6wyYwfBbzUECtb7zZGpV8p",
+          "mission": "Chàng là nhân vật chính đi thu thập tất cả các lễ vật để đi hỏi cưới nàng theo đúng phong tục truyền thống. Vật phẩm được thu thập nhờ sự trợ giúp của Em trai và Mẹ chàng, mang đi trao đổi tại các Chợ phiên để có đủ lễ vật . Nếu không thu thập được đủ trước thời gian quy định, Chàng không kịp dâng lễ trước khi Nàng về nhà chồng, chuyện chuyển tiếp sang bàn chơi “Chuyện Nàng.”",
+          "description": "Chàng là chàng trai khôi ngô, cần mẫn, giàu ý chí đã sánh bước bên Nàng xinh đẹp, nết na từ thời thơ ấu. Vì mong ước được kết duyên với Nàng, nên khi bị nhà gái từ chối, Chàng phẫn chí quyết tâm lên đường đi làm ăn, cố gắng trở về giàu sang để lần nữa đem lễ vật đi hỏi cưới người con gái mình yêu. Sau bao ngày tháng bôn ba đất lạ, Chàng đã có của cải để trở về với Nàng."
+        },
+        {
+          "id": "3",
+          "name": "Em trai",
+          "type": "Chính diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1teBAmpQ3VVpb4xsutiTXUo2qNDM8CX1R",
+          "cover": "https://drive.google.com/uc?export=download&id=1bw279U_mPu-NmbkzapfyU0m_UUndtRh4",
+          "image": "https://drive.google.com/uc?export=download&id=153hOv38rhrxK8dgJyXyAzMqIyUc0tFa1",
+          "mission": "Em trai sẽ đồng hành cùng Chàng trong bàn chơi 'Chuyện Chàng', cùng Chàng thu thập và trao đổi vật phẩm để có đủ lễ vật hỏi cưới, đồng thời giúp Chàng ngăn chặn phe Phản diện đến quấy phá.",
+          "description": "Em trai là người anh em cùng đồng cam cộng khổ trong suốt hành trình đi làm ăn xa của Chàng. Đó là một trợ thủ đắc lực, đáng tin cậy, có thể giúp đỡ Chàng sớm thành công để trở về bên người thương nơi quê nhà"
+        },
+        {
+          "id": "4",
+          "name": "Mẹ chàng",
+          "type": "Chính diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=18bcRlSeMd05H8LkNlhHv5TRZkzXeR7bD",
+          "cover": "https://drive.google.com/uc?export=download&id=1oFZ-DPfyswtZHqa0PdQglk0NM43T2HJh",
+          "image": "https://drive.google.com/uc?export=download&id=1lKy0rp3hIG7ZMRtcIXTSYntHCNfG2065",
+          "description": "Đây là đấng sinh thành nên Chàng, một người mẹ tảo tần, không ngại khó ngại khổ, luôn là hậu phương vững chắc, ủng hộ cho Chàng có dũng khí thực hiện ước mơ của mình",
+          "mission": "Mẹ chàng sẽ đồng hành cùng Chàng trong bàn chơi <b>'Chuyện Chàng'</b>, cùng Chàng thu thập và trao đổi vật phẩm để có đủ lễ vật hỏi cưới, đồng thời giúp Chàng ngăn chặn phe Phản diện đến quấy phá"
+        },
+        {
+          "id": "5",
+          "name": "Chị gái",
+          "type": "Chính diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1Spukw8xetuBcfhDDWy8MKqSdlw5v8LR8",
+          "cover": "https://drive.google.com/uc?export=download&id=1trUG-VgBfa8OwZXhL1DL36guPADoUovI",
+          "image": "https://drive.google.com/uc?export=download&id=1vMU9D27LRS2GCi1Jbv7NxZb4jPMSZcFu",
+          "mission": "Chị gái sẽ đồng hành cùng Nàng trong bàn chơi “Chuyện Nàng”, cùng Nàng thu thập và trao đổi vật phẩm để lấy được kỷ vật tình yêu, đồng thời giúp Nàng ngăn chặn phe Phản diện đến quấy phá",
+          "description": "Đây là người chị gái cùng bản thân thiết với Nàng. Hai chị em đã luôn ở bên cạnh đỡ đần nhau, đặc biệt là trong khoảng thời gian theo nhà chồng gian nan, khốn khó của Nàng, Chị gái vẫn luôn âm thầm trợ giúp, chia sẻ những khó khăn với Nàng."
+        },
+        {
+          "id": "6",
+          "name": "Chồng 1",
+          "type": "Phản diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1RghWs3nFuVNpMUQQKnkj2H7WPq9NXJsW",
+          "cover": "https://drive.google.com/uc?export=download&id=1hlX1mqeIX_AgxqnYzZzPfw3kk0dLN8a9",
+          "image": "https://drive.google.com/uc?export=download&id=10-Yf9WuCOePq2TXexIWYRpOev9faJvlk",
+          "mission": "Người chồng thứ nhất này sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
+          "description": " Đây là người đầu tiên mà Nàng bị gả cho vì tưởng rằng người này giàu có, đáng tin. Thật không ngờ rằng “Khi chưa lấy nhau thì vồ vập/ Khi chưa đón về thì xun xoe/ Khi đã là dâu thì đuổi dâu xuống sàn ăn cám”. Nàng về nhà chồng chưa được bao lâu đã bị chồng hắt hủi, đánh đập và trả về lại cho nhà Nàng."
+        },
+        {
+          "id": "7",
+          "name": "Chồng 2",
+          "type": "Phản diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=1X-p9rcOm9U_4W24ZhZZ09mME9__7M1bZ",
+          "cover": "https://drive.google.com/uc?export=download&id=1hdkJ0lXyPMEZVH-J5mjMsySnuD0i2Wkt",
+          "image": "https://drive.google.com/uc?export=download&id=1X3oVROopc7uS43JMdF53Ibk2aRvJgB5Y",
+          "mission": "Người chồng thứ hai này sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
+          "description": "Đây là người thứ hai Nàng bị gả cho sau sự đổ vỡ với người chồng thứ nhất. Đã là lần thứ hai sang ngang nhưng Nàng vẫn sống trong đau khổ vì thương nhớ Chàng, do đó đã cố tình làm những việc quái gở để nhà chồng khinh ghét rồi bị chồng không chịu được đem bán ra Chợ."
+        },
+        {
+          "id": "8",
+          "name": "Bố chồng",
+          "type": "Phản diện",
+          "dataMienNguocId": "1",
+          "chess": "https://drive.google.com/uc?export=download&id=13yyUO0LACfqEXRIs6k5ridS7O0WwxPBx",
+          "cover": "https://drive.google.com/uc?export=download&id=1UC6WZs8VbVqkTOopsvld7DN1jFAdS0Jn",
+          "image": "https://drive.google.com/uc?export=download&id=1tDxc1iKSJfuAIuJG1OC3os7zUOSbfcmC",
+          "mission": "Bố chồng sẽ đi lấy những vật phẩm (nhưng không được thực hiện trao đổi ở các Chợ phiên) và cản đường đi nước bước của Chàng và Nàng, tìm cách cản trở không cho phe Chính diện hoàn thành nhiệm vụ.",
+          "description": "Người đàn ông này là bố của người chồng thứ nhất, tính tình gia trưởng, hống hách, luôn khinh miệt và xui con trai đối xử thậm tệ với Nàng."
+        }
     ]
   }
 ]

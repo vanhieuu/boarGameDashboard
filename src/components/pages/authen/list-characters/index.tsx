@@ -2,7 +2,6 @@ import {
   Animated,
   Dimensions,
   Image,
-  Platform,
   StyleSheet,
   Text,
   TextInput,
@@ -21,6 +20,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Icons } from "../../../atoms/icon/icons";
 import { navigate } from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
+import { SearchBar } from "@app/components/molecules/searchBar";
 
 const { width, height } = Dimensions.get("screen");
 const ITEM_SIZE = 180;
@@ -38,8 +38,11 @@ const ListCharactersScreens = () => {
   const listCharacters: Characters[] = useSelector(
     (state: RootState) => state.characters.character
   );
+
   const [currentIndex, setCurrentIndex] = useState(listCharacters[0]);
   const [value, setValue] = useState("");
+  const [show, setShow] = useState(false);
+  const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
   useEffect(() => {
     Animated.spring(scrollXAnimation, {
       toValue: scrollXIndex,
@@ -60,15 +63,75 @@ const ListCharactersScreens = () => {
 
   return (
     <SafeAreaProvider style={styles.root}>
-      <View style={styles.searchView}>
-        <View style={styles.iconView}>
-          <Icons icon="iconSearch" size={20} />
+      <SearchBar setFilterData={setFilterData} setShow={setShow} />
+      {show && (
+        <View
+          style={styles.filterItemView}
+        >
+          <View
+            style={{
+              marginHorizontal: 20,
+              backgroundColor: theme.colors.background,
+            }}
+            // onTouchStart={() => setShow(false)}
+          >
+            {filterData.length > 0 ? (
+              filterData.map((item, index) => {
+                return (
+                  <TouchableOpacity
+                    key={index}
+                    style={{
+                      flexDirection: "row",
+                      alignItems: "center",
+                      marginTop: 10,
+                    }}
+                    onPress={() => {
+                      navigate(APP_SCREEN.DETAILS_CHARACTERS, {
+                        characters: item,
+                      });
+                    }}
+                  >
+                    <Image
+                      source={{ uri: item.chess }}
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: 40,
+                      }}
+                      resizeMode="contain"
+                    />
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 16,
+                          fontWeight: "bold",
+                          color: theme.colors.black,
+                        }}
+                      >
+                        {item.name}
+                      </Text>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: "200",
+                          color: theme.colors.border,
+                        }}
+                      >
+                        {item.type}
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                );
+              })
+            ) : (
+              <View style={{ backgroundColor: theme.colors.background }}>
+                <Text>Không tìm thấy</Text>
+              </View>
+            )}
+          </View>
         </View>
-        <TextInput
-          style={styles.searchBarText}
-          onChangeText={debounce((text) => setValue(text), 300)}
-        />
-      </View>
+      )}
+
       <View
         style={{
           marginTop: height > 800 ? 40 : 20,
@@ -201,4 +264,12 @@ const rootStyle = (theme: AppTheme) =>
       width: 20,
       height: 20,
     },
+    filterItemView:{
+      width: width,
+      position: "absolute",
+      zIndex: 10000,
+      flex: 1,
+      height: "100%",
+      top: 90,
+    }
   });

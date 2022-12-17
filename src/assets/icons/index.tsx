@@ -9,6 +9,7 @@ export const icons = {
     icWorldActive: require('./source/iconMapActive.png'),
     iconSearch: require('./source/iconSearch.png'),
     iconBack:require('./source/iconBack.png'),
+    iconFilter:require('./source/filter.png'),
 }
 
 

@@ -38,11 +38,10 @@ const styles = (theme: AppTheme) =>
       position: "absolute",
       zIndex: 1000,
     },
-    textStyle:{
-        fontWeight:'bold',
-        fontFamily: "Roboto-Medium",
-        fontSize:18,
-        lineHeight:22,
-        textAlign:'center'
-    }
+    textStyle: {
+      fontSize: 18,
+      fontWeight: "600",
+      lineHeight: 20,
+      fontFamily: "Roboto-Bold",
+    },
   });

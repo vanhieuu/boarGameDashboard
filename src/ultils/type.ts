@@ -1,4 +1,5 @@
 export type Characters = {
+
     id:string,
     name:string,
     type:"Chính diện" | "Phản diện",
@@ -6,7 +7,8 @@ export type Characters = {
     cover:string,
     image:string,
     description:string,
-    mission:string
+    mission:string,
+    dataMienNguocId:"1"
 }
 export type Items = {
     id:string,
@@ -14,6 +16,16 @@ export type Items = {
     type:string,
     image:string,
     inSet:boolean,
-    function:string
+    function:string, 
+    dataMienNguocId:"1"
 }
+export type Data = DataCharacters | DataItems
 
+export type DataCharacters = {
+    type:"Characters",
+    data:Characters[]
+}
+export type DataItems = {
+    type:"Items",
+    data:Items[]
+}

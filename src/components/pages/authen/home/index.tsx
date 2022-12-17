@@ -1,20 +1,30 @@
 import { StyleSheet, Text, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { AppTheme, useTheme } from "../../../../theme";
-import { apiGetData } from "../../../../assets/store/api";
-import { useDispatch } from "react-redux";
+import {
+  apiGetDataCharacters,
+  apiGetItems,
+} from "../../../../assets/store/api";
+import { useDispatch, useSelector } from "react-redux";
 
 import { onSetCharacters } from "../../../../assets/store/api/slice/characters";
+import { onSetItem } from "@app/assets/store/api/slice/item";
+import { onSetData, onSetMoreData } from "@app/assets/store/api/slice/appSlice";
+import { RootState } from "@app/assets/store/store";
 
 const HomePageScreens = () => {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
-
+  const data: any[] = useSelector<RootState, any>((state) => state.app.data);
   useEffect(() => {
     setLoading(true);
-    apiGetData().then((res) => {
-      dispatch(onSetCharacters(res[0].characters));
-     
+    apiGetDataCharacters().then((res) => {
+      dispatch(onSetCharacters(res));
+      dispatch(onSetData([...res]));
+      apiGetItems().then((item) => {
+        dispatch(onSetItem(item));
+        dispatch(onSetData(res.concat(item)));
+      });
     });
   }, []);
 
