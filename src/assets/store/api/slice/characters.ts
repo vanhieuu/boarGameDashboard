@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Characters } from "../../../../ultils/type";
 import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
 
 const initialState = {

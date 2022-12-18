@@ -29,6 +29,9 @@ const styles = (theme: AppTheme) =>
       borderWidth: 2,
       justifyContent: "center",
       alignItems: "center",
+      zIndex:10000,
+      backgroundColor:theme.colors.backgroundCard,
+      
     },
     second: {
       width: 180,
@@ -36,12 +39,14 @@ const styles = (theme: AppTheme) =>
       borderColor: theme.colors.searchBar,
       borderWidth: 2,
       position: "absolute",
-      zIndex: 1000,
+      // zIndex: 1000,
+      backgroundColor:'transparent'
     },
     textStyle: {
       fontSize: 18,
       fontWeight: "600",
       lineHeight: 20,
       fontFamily: "Roboto-Bold",
+      zIndex:3000
     },
   });

@@ -28,7 +28,8 @@ const TabItemsMolecules = ({
           {
             color:
               stateIndex === index ? theme.colors.primary : theme.colors.textTab,
-              fontWeight:'bold'
+              fontWeight:stateIndex === index ? "bold" : "400",
+              fontSize:12
           },
         ]}
       >

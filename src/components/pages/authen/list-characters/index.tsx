@@ -14,10 +14,8 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../../assets/store/store";
 import { Characters } from "../../../../ultils/type";
 import Constants from "expo-constants";
-import debounce from "lodash.debounce";
 import { useFonts } from "expo-font";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { Icons } from "../../../atoms/icon/icons";
 import { navigate } from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
 import { SearchBar } from "@app/components/molecules/searchBar";
@@ -25,7 +23,7 @@ import { SearchBar } from "@app/components/molecules/searchBar";
 const { width, height } = Dimensions.get("screen");
 const ITEM_SIZE = 180;
 const ITEM_HEIGHT = width * 0.8 * 1.7;
-const SPACING = 10;
+
 
 const ITEM_SPACING = (width - ITEM_SIZE) / 2;
 const ListCharactersScreens = () => {
@@ -40,7 +38,6 @@ const ListCharactersScreens = () => {
   );
 
   const [currentIndex, setCurrentIndex] = useState(listCharacters[0]);
-  const [value, setValue] = useState("");
   const [show, setShow] = useState(false);
   const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
   useEffect(() => {
@@ -51,10 +48,10 @@ const ListCharactersScreens = () => {
   }, []);
 
   const [fontsLoaded] = useFonts({
-    "Roboto-Bold": require("../../../../../assets/fonts/Roboto-Bold.otf"),
-    "Roboto-Medium": require("../../../../../assets/fonts/Roboto-Medium.otf"),
-    "Roboto-Light": require("../../../../../assets/fonts/Roboto-Light.otf"),
-    "Roboto-Regular": require("../../../../../assets/fonts/Roboto-Regular.otf"),
+    "Roboto-Bold": require("../../../../../assets/fonts/Roboto-Bold.ttf"),
+    "Roboto-Medium": require("../../../../../assets/fonts/Roboto-Medium.ttf"),
+    "Roboto-Light": require("../../../../../assets/fonts/Roboto-Light.ttf"),
+    "Roboto-Regular": require("../../../../../assets/fonts/Roboto-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -65,9 +62,7 @@ const ListCharactersScreens = () => {
     <SafeAreaProvider style={styles.root}>
       <SearchBar setFilterData={setFilterData} setShow={setShow} />
       {show && (
-        <View
-          style={styles.filterItemView}
-        >
+        <View style={styles.filterItemView}>
           <View
             style={{
               marginHorizontal: 20,
@@ -76,7 +71,7 @@ const ListCharactersScreens = () => {
             // onTouchStart={() => setShow(false)}
           >
             {filterData.length > 0 ? (
-              filterData.map((item, index) => {
+              filterData.map((item:any, index) => {
                 return (
                   <TouchableOpacity
                     key={index}
@@ -86,9 +81,16 @@ const ListCharactersScreens = () => {
                       marginTop: 10,
                     }}
                     onPress={() => {
-                      navigate(APP_SCREEN.DETAILS_CHARACTERS, {
-                        characters: item,
-                      });
+                      if(item.typeOf === 'Characters'){
+                        navigate(APP_SCREEN.DETAILS_CHARACTERS, {
+                          characters: item,
+                        });
+                      }else{
+                        navigate(APP_SCREEN.DETAIL_ITEMS,{
+                          items:item
+                        })
+                      }
+                     
                     }}
                   >
                     <Image
@@ -226,6 +228,7 @@ const rootStyle = (theme: AppTheme) =>
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: theme.colors.background,
+      paddingTop:Constants.statusBarHeight -15 + (height > 800 ? 10 : 0),
     },
     charImage: {
       width: ITEM_SIZE,
@@ -264,12 +267,12 @@ const rootStyle = (theme: AppTheme) =>
       width: 20,
       height: 20,
     },
-    filterItemView:{
+    filterItemView: {
       width: width,
       position: "absolute",
       zIndex: 10000,
       flex: 1,
       height: "100%",
-      top: 90,
-    }
+      top: height > 800 ? 110 : 83,
+    },
   });

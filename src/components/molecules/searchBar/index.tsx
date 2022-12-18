@@ -88,7 +88,7 @@ const rootStyles = (theme: AppTheme) =>
       paddingLeft: 35,
       fontSize: 14,
       lineHeight: 16,
-      fontFamily: "Roboto-Light",
+      fontFamily: "Roboto",
     },
     filterItem: { width: "100%", alignItems: "flex-end" },
   });

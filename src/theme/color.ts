@@ -13,7 +13,10 @@ export const ColorDefault = {
     white:'#fff',
     black:"#000",
     mud:'#ffcc4e',
-    background: '#FFF1E2',
+    background: '#FFF6ED',
+    backgroundCard:"#FFF0E1",
+    // background: 'red',
+
     card: '#fda89C',
     text: '#000',
     border: '#ccc',
@@ -24,8 +27,8 @@ export const ColorDefault = {
 
 
 export const ColorDark = {
-    primary:'#00944A',
-    secondary:'#c61d23',
+    primary:'#c61d23',
+    secondary:"#00944A",
     darkBlue:'#0f1039',
     red: '#ed1c24',
     red01: '#FB3939',
@@ -38,10 +41,14 @@ export const ColorDark = {
     white:'#fff',
     black:"#000",
     mud:'#ffcc4e',
-    background: '#f4f4f4',
+    background: '#FFF6ED',
+    backgroundCard:"#FFF0E1",
+    // background: 'red',
+
     card: '#fda89C',
     text: '#000',
     border: '#ccc',
     notification: '#3e3e3e',
-    searchBar:'#64632C',textTab:"#292763"
+    searchBar:'#64632C',
+    textTab:"#292763"
 }

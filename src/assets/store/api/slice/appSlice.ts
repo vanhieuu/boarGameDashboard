@@ -4,6 +4,7 @@ import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
 
 const initialState = {
   data: [],
+  dataEvent:{}
 };
 
 export const appSlice = createSlice({
@@ -15,9 +16,13 @@ export const appSlice = createSlice({
     },
     onSetMoreData:(state,action:PayloadAction<any>) =>{
       [...state.data].concat(action.payload);
+    },
+    onSetDataEvent:(state,action:PayloadAction<any>) =>{
+      state.dataEvent = action.payload
     }
+    
   },
 });
 
-export const { onSetData,onSetMoreData } = appSlice.actions;
+export const { onSetData,onSetMoreData,onSetDataEvent } = appSlice.actions;
 export default appSlice.reducer;

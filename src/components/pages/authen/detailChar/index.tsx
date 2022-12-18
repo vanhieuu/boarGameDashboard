@@ -45,11 +45,7 @@ const DetailCharactersScreen = () => {
         <TitleCharacters name={params.name.toUpperCase()} />
         <View style={{ marginTop: 30, marginHorizontal: 16 }}>
           <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "space-around",
-              alignItems: "center",
-            }}
+            style={styles.rootOverView}
           >
             <View style={styles.characterView}>
               <View>
@@ -89,12 +85,7 @@ const DetailCharactersScreen = () => {
                 bounces={false}
                 style={[
                   styles.contentTitle,
-                  {
-                    height: height > 800 ? 355 : 300,
-                    marginBottom: 10,
-                    paddingTop: 4,
-                    paddingBottom: 30,
-                  },
+                 styles.descriptionView
                 ]}
               >
                 <View style={styles.titleOverview}>
@@ -111,10 +102,7 @@ const DetailCharactersScreen = () => {
               <ScrollView
                 style={[
                   styles.contentTitle,
-                  {
-                    height: height > 800 ? 200 : 180,
-                    // marginBottom: 20,
-                  },
+                  styles.missionView
                 ]}
                 alwaysBounceVertical={false}
                 bounces={false}
@@ -165,7 +153,7 @@ const rootStyle = (theme: AppTheme) =>
       fontSize: 16,
       fontWeight: "600",
       lineHeight: 20,
-      fontFamily: "Roboto",
+      fontFamily: "Roboto-Bold",
     },
     textTitleStyle: {
       fontSize: 18,
@@ -200,9 +188,10 @@ const rootStyle = (theme: AppTheme) =>
     contentTitle: {
       width: width / 2 - 20,
       height: 40,
-      borderWidth: 2,
+      borderWidth: 1,
       borderColor: theme.colors.darkBlue,
       marginBottom: 10,
+      backgroundColor:theme.colors.backgroundCard
     },
     titleOverview: { justifyContent: "center", alignItems: "center" },
     textOverview: {
@@ -212,4 +201,21 @@ const rootStyle = (theme: AppTheme) =>
       paddingHorizontal: 15,
       paddingBottom: 5,
     },
+    missionView:{
+      height: height > 800 ? 355 : 300,
+      marginBottom: 10,
+      paddingTop: 4,
+      paddingBottom: 30,
+    },
+    descriptionView:{
+      height: height > 800 ? 355 : 300,
+      marginBottom: 10,
+      paddingTop: 4,
+      paddingBottom: 30,
+    },
+    rootOverView:{
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignItems: "center",
+    }
   });

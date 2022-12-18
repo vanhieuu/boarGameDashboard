@@ -1,4 +1,4 @@
-import { Characters } from "../ultils/type"
+import { Characters, Items } from "../ultils/type"
 
 export enum APP_SCREEN  {
     SPLASH = 'SPLASH',
@@ -25,7 +25,9 @@ export type AuthenScreenParamsList = {
     [APP_SCREEN.DETAILS_CHARACTERS]:{
         characters:Characters
     },
-    [APP_SCREEN.DETAIL_ITEMS]:undefined,
+    [APP_SCREEN.DETAIL_ITEMS]:{
+        items:Items
+    },
     [APP_SCREEN.THIRD_DIMENSION_MODAL_VIEW]:undefined,
     [APP_SCREEN.BOTTOM_TAB]:undefined
 }
