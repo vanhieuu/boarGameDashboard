@@ -4,7 +4,6 @@ import {
   Image,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -14,7 +13,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../../assets/store/store";
 import { Characters } from "../../../../ultils/type";
 import Constants from "expo-constants";
-import { useFonts } from "expo-font";
+
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { navigate } from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
@@ -23,7 +22,6 @@ import { SearchBar } from "@app/components/molecules/searchBar";
 const { width, height } = Dimensions.get("screen");
 const ITEM_SIZE = 180;
 const ITEM_HEIGHT = width * 0.8 * 1.7;
-
 
 const ITEM_SPACING = (width - ITEM_SIZE) / 2;
 const ListCharactersScreens = () => {
@@ -47,17 +45,6 @@ const ListCharactersScreens = () => {
     }).start();
   }, []);
 
-  const [fontsLoaded] = useFonts({
-    "Roboto-Bold": require("../../../../../assets/fonts/Roboto-Bold.ttf"),
-    "Roboto-Medium": require("../../../../../assets/fonts/Roboto-Medium.ttf"),
-    "Roboto-Light": require("../../../../../assets/fonts/Roboto-Light.ttf"),
-    "Roboto-Regular": require("../../../../../assets/fonts/Roboto-Regular.ttf"),
-  });
-
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <SafeAreaProvider style={styles.root}>
       <SearchBar setFilterData={setFilterData} setShow={setShow} />
@@ -71,7 +58,7 @@ const ListCharactersScreens = () => {
             // onTouchStart={() => setShow(false)}
           >
             {filterData.length > 0 ? (
-              filterData.map((item:any, index) => {
+              filterData.map((item: any, index) => {
                 return (
                   <TouchableOpacity
                     key={index}
@@ -81,27 +68,35 @@ const ListCharactersScreens = () => {
                       marginTop: 10,
                     }}
                     onPress={() => {
-                      if(item.typeOf === 'Characters'){
+                      if (item.typeOf === "Characters") {
                         navigate(APP_SCREEN.DETAILS_CHARACTERS, {
                           characters: item,
                         });
-                      }else{
-                        navigate(APP_SCREEN.DETAIL_ITEMS,{
-                          items:item
-                        })
+                      } else {
+                        navigate(APP_SCREEN.DETAIL_ITEMS, {
+                          items: item,
+                        });
                       }
-                     
                     }}
                   >
-                    <Image
-                      source={{ uri: item.chess }}
+                  {item.irlImage == undefined ?   <Image
+                      source={{ uri: item.chess  }}
                       style={{
                         width: 40,
                         height: 40,
                         borderRadius: 40,
                       }}
                       resizeMode="contain"
-                    />
+                    /> :   <Image
+                    source={{ uri: item.image  }}
+                    style={{
+                      width: 30,
+                      height: 30,
+                      borderRadius: 40,
+                    }}
+                    resizeMode="contain"
+                  /> }
+                   
                     <View>
                       <Text
                         style={{
@@ -119,7 +114,13 @@ const ListCharactersScreens = () => {
                           color: theme.colors.border,
                         }}
                       >
-                        {item.type}
+                        {item.type === "exchange"
+                          ? "Trao đổi"
+                          : item.type === "material"
+                          ? "Nguyên liệu"
+                          : item.type === "primary"
+                          ? "Vật phẩm chính"
+                          : item.type}
                       </Text>
                     </View>
                   </TouchableOpacity>
@@ -228,7 +229,7 @@ const rootStyle = (theme: AppTheme) =>
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: theme.colors.background,
-      paddingTop:Constants.statusBarHeight -15 + (height > 800 ? 10 : 0),
+      paddingTop: Constants.statusBarHeight - 15 + (height > 800 ? 10 : 0),
     },
     charImage: {
       width: ITEM_SIZE,

@@ -1,0 +1,676 @@
+[
+    {
+        "id": "1",
+        "dataMienNguocId": "1",
+        "name": "Đồng bạc",
+        "type": "exchange",
+        "image": "https://drive.google.com/uc?export=download&id=1eQvuBvJLd3BKlaRHURLMbpVPaM9r3JdB",
+        "inSet": false,
+        "typeOf": "Items",
+        "usingIn": "all",
+        "setName": null,
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1cuhlHK2ZQOlTx04KKvpa9xq__I34XI0F",
+        "obtain": "Nhận vật phẩm tại các ô đặc biệt trên bàn cờ",
+        "description": "Theo phong tục của đồng bào Thái, khi người con trai đi lấy vợ, ngoài đảm nhiệm bữa tiệc cưới bên gia đình nhà gái thì nhà trai (chú rể) còn phải mang theo đồng bạc (gọi là ngân hạo, ngân mằn thảu) để cầu hôn và làm quà biếu bố mẹ vợ."
+    },
+    {
+        "id": "2",
+        "name": "Ngựa",
+        "type": "exchange",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1eQvuBvJLd3BKlaRHURLMbpVPaM9r3JdB",
+        "inSet": false,
+        "description": "Với đồng bào các dân tộc Thái, con ngựa là vật nuôi không thể thiếu trong nhà. Từ xa xưa, việc đi săn, đi hái lượm trong rừng là việc thường ngày của đồng bào, và những con ngựa là phương tiện để vượt núi, vượt khe, qua suối để vào rừng. Ngồi trên yên ngựa, các chàng trai thỏa sức đuổi theo các con thú thể hiện tài năng săn bắn của mình. Đây cũng là phương tiện để các chàng trai đi hỏi vợ, đưa vợ con về thăm mẹ cha. Bao đồ đạc cồng kềnh, nặng nề ngựa đều kham cả.",
+        "obtain": "Nhận vật phẩm tại các ô Chuồng ngựa trên bàn cờ.",
+        "usingIn": "all",
+        "setName": null,
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1HHY_ZpwGRM3QtGBvlOoq6RGt7iDZ_ByM"
+    },
+    {
+        "id": "3",
+        "name": "Trâu",
+        "type": "exchange",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=19mxytgxlIyGqBNvZgCvP69NC7QOxZxwq",
+        "inSet": false,
+        "description": "Cũng như nhiều dân tộc có cùng phương thức canh tác lúa nước, người Thái dùng trâu làm sức kéo để khai đất vỡ hoang, cày bừa... Vì thế, con trâu đã gắn liền với nhiều mặt đời sống sinh hoạt và tâm linh của người Thái. Trong sản xuất nông nghiệp, con trâu là đầu cơ nghiệp, trong các nghi lễ thiêng liêng con trâu là vật hiến sinh không thể thiếu",
+        "obtain": "Nhận vật phẩm tại các ô Chuồng trâu trên bàn cờ.",
+        "usingIn": "all",
+        "setName": null,
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1QzTkNNYOABtZwYxGVebT_PON_yMNygJQ"
+    },
+    {
+        "id": "4",
+        "name": "Sắt",
+        "type": "exchange",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=12-AHsH_RHVnL0nWOY1lT39j28NFEUn2M",
+        "inSet": false,
+        "description": "Quặng sắt là loại đất đá chứa nhiều khoáng chất khác nhau như kim loại, đá quý và được khai thác tại các mỏ khoáng sản lớn. Từ việc khai thác quặng sắt, sẽ luyện ra thành sắt và các hợp kim của sắt dùng để chế tạo rất nhiều sản phẩm ứng dụng trong đời sống.",
+        "obtain": "Nhận vật phẩm tại các ô Quặng sắt trên bàn cờ",
+        "usingIn": "all",
+        "setName": null,
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1tsYMBh5qojyzO0aLO0-P683ne1CEAUGT"
+    },
+    {
+        "id": "5",
+        "name": "Lợn bản",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1rWQFICDCtBa81AsKE6zzOzgZH4QSfQv5",
+        "inSet": false,
+        "description": "Thịt lợn không chỉ là món ăn thường ngày trong mỗi bữa cơm gia đình mà trong những dịp lễ trọng đại của người Thái như cưới xin, 1 con lợn khoảng 20kg là 1 trong những lễ vật bắt buộc mà nhà trai phải mang đến khi hỏi cưới nhà gái..",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1mEoVguddAL0Ffe3vnet3XrpEGcNo4yGA"
+    },
+    {
+        "id": "6",
+        "name": "Gà ta",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1cGwXtETv_dZxzLw19cCtvR7RAQJigAjH",
+        "inSet": false,
+        "description": "Đôi gà trống mái là vật lễ quan trong trong các dịp đặc biệt. Gà phải được lựa con đẹp, thịt ngon để dâng thờ cúng tổ tiên",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=17myvWazHwHmdr2fzdNfWt6oHK3EGjxAY"
+    },
+    {
+        "id": "7",
+        "name": "Cá suối",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1tpnlvjavAMD7dUtBDPMQvo0q-ihmOM9m",
+        "inSet": false,
+        "description": "Cá nướng gập nguyên con (Pa pỉnh tộp) là một món ăn dân tộc đặc sắc của người Thái với cách chế biến cầu kỳ, hương vị thơm ngon riêng có. Không chỉ được dâng tặng trong lễ hỏi, món cá này còn là món ăn thường ngày trong gia đình, là đặc sản tiếp đãi khách cũng như đồ cúng trong nhiều dịp lễ khác.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1GEW1FwBIBoko9kCBjh6dX-zPpeuWbo0y"
+    },
+    {
+        "id": "8",
+        "name": "Gạo nếp",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1_r18LZiUJH3UR_RQojr6Hs60cwq9MDk_",
+        "inSet": false,
+        "description": "Trong lễ hỏi xin cưới, gạo nếp dẻo thơm cùng với các lễ vật khác sẽ được nhà trai chuẩn bị 10kg để làm cỗ mời họ hàng gia đình nhà gái. Gạo nếp được đồ trong 1 chõ gỗ gọi là “nửng khảu” để cho ra những hạt xôi mềm dẻo, thơm ngon.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1duqeJ-QZSurcUMDowi7xSM_5nqnoI68W"
+    },
+    {
+        "id": "9",
+        "name": "Rượu cần",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1MT9IKKSb62kU1s0Iz5QCzwUDKrV5wOsG",
+        "inSet": false,
+        "description": "Rượu cần từ lâu đời đã trở thành đồ uống khá phổ biến đối với đồng bào người Thái nói riêng và dân miền núi nói chung. Rượu ủ trong chum, không qua chưng cất, cần rượu làm bằng cây trúc nhỏ, có khoan lỗ ở gốc và thông các mắt để khi hút thì rượu từ dưới sẽ thông lên tới đầu cần.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=11y67FdjHtJShrFlpcxf-CtpzwcfhX2Gu"
+    },
+    {
+        "id": "10",
+        "name": "Lá trầu",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1s--uN1kSXa_CMJxrfjsGk15USt9zMz64",
+        "inSet": false,
+        "description": "Người Thái cũng coi miếng trầu là tượng trưng cho tình yêu lứa đôi, miếng trầu đi đầu, tác hợp cho lứa đôi và là sợi dây kết chặt mối lương duyên trai, gái thành vợ thành chồng. Để đưa mâm lễ sang thưa chuyện nhà gái, nhà trai không thể thiếu được lá trầu, quả cau.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1HTL0iyxUmtfh4IGzMaux5lRyeOitvXxR"
+    },
+    {
+        "id": "11",
+        "name": "Thuốc lào",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1zTu8BP5aRtCGxcrbCK85AQowOGcmgjoQ",
+        "inSet": false,
+        "description": "Cùng với lá trầu và cau, thuốc lào là 1 nguyên liệu không thể thiếu trong tục ăn trầu. Trong lúc nhai, để tẩy cổ trầu và xác trầu thì người ta có thể dùng một nhúm nhỏ thuốc lào để chà răng (gọi là thuốc xỉa).",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1lw6zbyziC9RVh80OZeAQGOqRnriXKHKL"
+    },
+    {
+        "id": "12",
+        "name": "Cau",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1Rv5HXioQ-D9KU01_4EeGGS2mgh-8TMGB",
+        "inSet": false,
+        "description": "Quả cau được chọn làm lễ có màu xanh ánh vàng, hình nón, kích thước xấp xỉ quả trứng gà, bên trong lốm đốm. Vị ngọt của cau hoà cùng vị cay của lá trầu, vị đắng của rễ và vị nóng của vôi đã tạo nên miếng trầu làm cho thơm miệng, đỏ môi.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1eKfF7xw0VZbtgiIheSbvAD7JF5L5NyMI"
+    },
+    {
+        "id": "13",
+        "name": "Muối trắng",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1lxUM5kZ6YUf6OhBcu5uxMdA76kyMYhBB",
+        "inSet": false,
+        "description": "Gói muối là 1 trong những đồ lễ cần có trong bộ lễ mà nhà gái yêu cầu. Số lượng nhiều hay ít tuỳ thuộc vào bên nhà gái ra cho nhà trai.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=19Q0ukbWTLe0aCVg1wJOYsOkIH_Rr5n4v"
+    },
+    {
+        "id": "14",
+        "name": "Gừng",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1fJlduWeG6cb9XK-G1XCIeNV_vqblI5BR",
+        "inSet": false,
+        "description": "Gói gừng là 1 trong những đồ lễ cần có trong bộ lễ mà nhà gái yêu cầu. Số lượng nhiều hay ít tùy thuộc vào bên nhà gái ra cho nhà trai.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1CTKjVC9WdV8oHFQJtAeaSE8nONiZXp8_"
+    },
+    {
+        "id": "15",
+        "name": "Khăn Piêu",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=18GbhNjbt5_rGKCjALhRL4umbR01joIOl",
+        "inSet": true,
+        "description": " Chiếc khăn Piêu là sản phẩm văn hoá in đậm bản sắc dân tộc của người Thái. Khăn Piêu được dệt từ sợi bông như cách làm thổ cẩm truyền thống, sau đó nhuộm chàm. Tới khi vải khô thì thêu lên đó những hoa văn rực rỡ và bắt mắt. Không chỉ gắn bó với cuộc sống thường ngày, bình dị của người dân, chiếc khăn Piêu còn là “vật tín”, minh chứng đặc biệt cho tình yêu đôi lứa.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            },
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách thu thập đủ các vật phẩm nguyên liệu (Vải, Kim, Giỏ chỉ thêu) để tạo nên"
+            }
+        ],
+        "usingIn": "all",
+        "setName": "Sính lễ",
+        "irlImage": "https://drive.google.com/uc?export=download&id=1__ZRvrcQaaPK_zumqDMr-ySUoCX1ltFd",
+        "isMaterial": false,
+        "combinationRecipe": [
+            {
+                "name": "Vải",
+                "image": "https://drive.google.com/uc?export=download&id=11d2GZtygyf3HElxXmhaMA8wYXYJiBFQQ"
+            },
+            {
+                "name": "Kim",
+                "image": "https://drive.google.com/uc?export=download&id=1DsaR-4QatWIqcSyGcv0vWXDKWXMYPwjg"
+            },
+            {
+                "name": "Giỏ chỉ thêu",
+                "image": "https://drive.google.com/uc?export=download&id=1hXEtqAG32CQMW3lVazBO7YUc9FxJ5x5h"
+            }
+        ]
+    },
+    {
+        "id": "16",
+        "name": "Áo cóm",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1dNsU7sWrQoLhrqnoDiGQyIC77eTOhZFS",
+        "inSet": false,
+        "description": "Chiếc áo cóm được may bó sát người, gấu áo vừa chấm cạp váy, rất kín đáo nhưng vẫn làm tôn thêm những đường nét trên cơ thể của người phụ nữ. Điểm nổi bật nhất trên chiếc áo Cóm là 2 hàng khuy bướm, một bên là đại diện cho hàng khuy bướm đực, một bên là hàng khuy bướm cái được cài đan xen vào nhau tạo thành một đường thẳng rất đẹp và nổi bật trên nền áo.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1a9aW84sYOaUtC2BUjj_TI4j9-pn-dBfp"
+    },
+    {
+        "id": "17",
+        "name": "Đai lưng",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1H2y6SQQURtEBjVD2tTbCQCvfPnxqixid",
+        "inSet": false,
+        "description": "Thắt lưng (xài ẻo) làm bằng vải tơ tằm hay sợi bông màu xanh lam hoặc tím sẫm, thắt ngang eo để giữ cho cạp váy quấn chặt lấy eo bụng, đồng thời là điểm nhấn để tôn lên vòng eo thon của người con gái Thái.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1f8M5PnHSQsuxPkss3NLGoIvQGs8_uFGT"
+    },
+    {
+        "id": "18",
+        "name": "Búi tóc",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1bC_76-PSEV10HVvheXuBbHWO7Q09yD4U",
+        "inSet": false,
+        "description": "Búi tóc được nhà trai chuẩn bị để thực hiện Tẳng cẩu, đánh dấu mốc người con gái đã trưởng thành và đi lấy chồng. Nghi lễ được thực hiện tại nhà gái trước lúc nhà trai đón dâu, cô dâu ngồi giữa quay mặt về hướng Đông. Một người phụ nữ đại diện cho nhà gái chải tóc cô dâu về phía trước mặt rồi cùng người đại diện cho nhà trai cột toàn bộ tóc lên đỉnh đầu. Sau đó cuộn tròn lại thành búi, kéo mái tóc ra hai bên để phần mái bồng ra không gây cảm giác khó chịu.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1CZpn7PvQEDBcgb2-SWFXisLakayDncSb"
+    },
+    {
+        "id": "19",
+        "name": "Trâm cài bạc",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1WiINed09iLpC7ZOUT1UVzIohvKKHRrmN",
+        "inSet": false,
+        "description": "Trong lễ Tẳng cẩu, khi búi tóc lên thì đồ vật không thể thiếu chính là cây trâm bạc sẽ được cài xuyên qua búi tóc. Trâm được làm bằng bạc hoặc ngà voi, có cấu tạo hình “kim” dài trên dưới 10cm, một đầu có mũ là 1 miếng bạc hình tròn và một đầu nhọn. Nó vừa giúp túi tóc thêm chắc chắn, sắc trắng ngà trên nền tóc đen tạo điểm nhấn cho mái tóc, vừa có ý nghĩa rất đặc biệt.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1mpxuQARTlNqocvipHlVq7ZDrmVf0JDj6"
+    },
+    {
+        "id": "20",
+        "name": "Hoa tai bạc",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1CyVU_NfRGMkY30_YdOQNwfFM81z1-BDM",
+        "inSet": false,
+        "description": "Một trong những món trang sức bạc phổ biến của các cô gái, là lễ vật của nhà trai mang đến cho nhà gái. Hoa tai thường được làm bằng bạc hoặc bằng vàng. Hoa tai của phụ nữ Thái chủ yếu là hình nụ, được chạm, khắc hoa văn tinh tế và sang trọng.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1l8TiqVudV9NY-rdFWcQhfh_slCik3txv"
+    },
+    {
+        "id": "21",
+        "name": "Vòng bạc",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1eKAGWJSPZ0vS1w3tm8h0XMW9g4ri2HRR",
+        "inSet": false,
+        "description": "Vòng bạc bao gồm vòng cổ lẫn vòng tay. Vòng làm bạc có thể trơn hoặc chạm khắc hoa văn. Vòng lấp lánh càng làm tăng thêm vẻ đẹp duyên dáng của người con gái Thái. Đây cũng là lễ vật không thể thiếu khi rước dâu về nhà chồng.",
+        "obtain": [
+            {
+                "map": "1",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "1",
+        "setName": "Sính lễ",
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1kk6iqRmQLmJAOYVpdf3r9WI0J6Tr7FTm"
+    },
+    {
+        "id": "22",
+        "name": "Vải",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=11d2GZtygyf3HElxXmhaMA8wYXYJiBFQQ",
+        "inSet": true,
+        "description": "Vải của dân tộc Thái được các cô gái Thái dệt bằng khung dệt từ bông hoặc tơ tằm. Vải thô sau khi dệt có hai màu tự nhiên là màu trắng và màu nâu nhạt. Vải được dệt xong có thể đem nhuộm hoặc thêu dệt thổ cẩm để làm ra các sản phẩm như quần áo, chăn gối, đệm, khăn, túi,...,",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1iY9F2KLJfLTey5xOj_gPfrhael15xsxe"
+    },
+    {
+        "id": "23",
+        "name": "Cây tre",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1lnAio4m9qQxUqI_AxbcutzKY_dFIpP-N",
+        "inSet": true,
+        "description": "Tre là 1 nguyên liệu để tạo ra chiếc đàn môi. Mảnh tre vót mỏng tạo dáng chiếc lá tre. Người ta cắt một chiếc lưỡi dài theo chiều thân đàn, phần đầu lưỡi rời ra chỉ còn phần gốc dính vào thân đàn. Chiếc lưỡi này là bộ phận rung của nhạc cụ. Phần cuối thân đàn có buộc 1 sợi dây hay có 1 tay cầm.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1F_na23e7ithhNVgzheJaQLXrrSBjOsd4"
+    },
+    {
+        "id": "24",
+        "name": "Đồng",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=15Ulu5WGD_8eLtMyR0Glr_FW-Y9meYnd3",
+        "inSet": true,
+        "description": "Đồng cũng là 1 nguyên liệu để chế tác đàn môi. Chọn lá đồng mỏng sau đó lấy dao gọt cho thật mỏng cắt hơi vát từ đầu xuống cuối, dùng kéo cắt mặt cái bẫy (lá thổi) cắt đầu nhỏ dời ra, hai đầu dùi hai lỗ luồn góc hai lỗ làm dây giật khi thổi..",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1oY5JurIIcS7g9ySrwnxldH4Y_x6M7psG"
+    },
+    {
+        "id": "25",
+        "name": "Thóc",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=18hViJ5Et5d0cptirc1h4BfStpi1ROjRI",
+        "inSet": true,
+        "description": "Thóc giống được chính tay người dân tộc Thái trồng. Là một trong những vật nhồi vào quả còn cùng với hạt bông, muối ăn và trấu tượng trưng cho sự no đủ.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1wD8JxsrqDJSeyh129tUzTsK9vvX6YTuH"
+    },
+    {
+        "id": "26",
+        "name": "Bông",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1EtuMWYg8bLzTOHJoQkTy68dIE2_e3x6U",
+        "inSet": true,
+        "description": "Người Thái trồng cây bông, không chỉ để se sợi dệt vải mà còn lấy hạt bông để nhồi trong quả còn, cùng với thóc giống, muối ăn và trấu mang ý nghĩa cầu mong sự no ấm.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1DThiXAiNckrsdSq9VXtK8nrK-rjIuhxN"
+    },
+    {
+        "id": "27",
+        "name": "Giỏ chỉ thêu",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1hXEtqAG32CQMW3lVazBO7YUc9FxJ5x5h",
+        "inSet": true,
+        "description": "Những cuộn chỉ đa sắc để thêu lên những họa tiết hoa văn đặc trưng của dân tộc trên những tấm vải may áo váy, đêm chăn,... Quá trình nhuộm màu sợi vải vất vả, cầu kỳ với việc tìm nguyên liệu tạo màu như cỏ xanh, lõi cây mít, hoa hiên… để ra được các sợi màu xanh, đỏ, tím, vàng sặc sỡ. Sau khi nhuộm còn phải phơi khô bằng ánh nắng tự nhiên để lên màu đẹp nhất mới có thể thêu dệt.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=18KW1d_s1zWNpjj5IG-HcuqeTVOsPyuHA"
+    },
+    {
+        "id": "28",
+        "name": "Kim",
+        "type": "material",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1DsaR-4QatWIqcSyGcv0vWXDKWXMYPwjg",
+        "inSet": true,
+        "description": "Kim là 1 vật dụng không thể thiếu khi thêu dệt lên những tấm vải thổ cẩm đa sắc. Người con gái Thái phải thật tỉ mỉ, khéo léo trong từng đường kim mũi chỉ để tạo nên những hoa văn tuyệt đẹp đậm đà bản sắc dân tộc",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách dùng vật phẩm trao đổi để đổi lấy tại các Chợ Phiên bất kỳ"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Nguyên liệu",
+        "isMaterial": true,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1Jc2V-0FoQz_8A6GzjgvhebaGb1EJhCgX"
+    },
+    {
+        "id": "29",
+        "name": "Quả còn",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=1_ysSP0KOIoV3HOoO22FAj_KbN4Mt3XRg",
+        "inSet": true,
+        "description": "Quả còn được làm bằng những miếng vải đủ màu sắc khâu thành hình vuông to bằng nắm tay, bên trong nhồi hạt bông, thóc giống, muối ăn và một ít trấu.Quả còn được đính năm tua màu, bốn tua ở bốn góc và dây đáy, dây còn được làm bằng dây vải đính nhiều chùm vải tua rua nhiều màu sắc. Dây còn như thân rồng với chín tia nắng, tám tia mưa là tín hiệu mọi điều may mắn, tốt lành.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách thu thập đủ các vật phẩm nguyên liệu (Vải, Thóc, Bông) để tạo nên."
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Kỷ vật",
+        "irlImage": "https://drive.google.com/uc?export=download&id=1RrRJPP5jamDS7PMSe6GtB7wLOkb88o6C",
+        "isMaterial": true,
+        "combinationRecipe": [
+            {
+                "name": "Vải",
+                "image": "https://drive.google.com/uc?export=download&id=11d2GZtygyf3HElxXmhaMA8wYXYJiBFQQ"
+            },
+            {
+                "name": "Thóc",
+                "image": "https://drive.google.com/uc?export=download&id=18hViJ5Et5d0cptirc1h4BfStpi1ROjRI"
+            },
+            {
+                "name": "Bông",
+                "image": "https://drive.google.com/uc?export=download&id=1EtuMWYg8bLzTOHJoQkTy68dIE2_e3x6U"
+            }
+        ]
+    },
+    {
+        "id": "30",
+        "name": "Đàn môi",
+        "type": "primary",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=13_uFz0g4ypjrHdLGwH9kHdHhXPKYyPIa",
+        "inSet": true,
+        "description": "Đàn môi thuộc loại nhạc khí tự thân vang, được làm bằng kim khí, đồng thau và tre với hình dáng nhỏ nhắn, chỉ khoảng 7cm. Đàn môi không chỉ dùng để tiêu khiển mà còn được người ta sử dụng để giao duyên, thổ lộ tâm tình. Cái hay của lời tâm tình này là sự thầm kín, không cần thốt thành lời nhưng người ta vẫn hiểu được.",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm bằng cách thu thập đủ các vật phẩm nguyên liệu (Tre, Đồng và giỏ chỉ thêu) để tạo nên"
+            }
+        ],
+        "usingIn": "2",
+        "setName": "Kỷ vật",
+        "isMaterial": true,
+        "combinationRecipe": [
+            {
+                "name": "Vải",
+                "image": "https://drive.google.com/uc?export=download&id=11d2GZtygyf3HElxXmhaMA8wYXYJiBFQQ"
+            },
+            {
+                "name": "Thóc",
+                "image": "https://drive.google.com/uc?export=download&id=18hViJ5Et5d0cptirc1h4BfStpi1ROjRI"
+            },
+            {
+                "name": "Bông",
+                "image": "https://drive.google.com/uc?export=download&id=1EtuMWYg8bLzTOHJoQkTy68dIE2_e3x6U"
+            }
+        ],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1Pr3B18k0GuekbYwKZnp0r5upNjunxtoD"
+    },
+    {
+        "id": "31",
+        "name": "Lá dong",
+        "type": "exchange",
+        "dataMienNguocId": "1",
+        "typeOf": "Items",
+        "image": "https://drive.google.com/uc?export=download&id=17Y-urxLaKlx8AW-EWV_tzATU35g2SA_h",
+        "inSet": false,
+        "description": "Lá dong xanh tươi thường được dùng để gói các thực phẩm hoặc đồ dùng nhỏ. Cây lá dong dễ trồng, dễ mọc, được thu hái sử dụng và rao bán nhiều",
+        "obtain": [
+            {
+                "map": "2",
+                "obtain": "Nhận vật phẩm tại các ô đặc biệt trên bàn cờ."
+            }
+        ],
+        "usingIn": "2",
+        "setName": null,
+        "isMaterial": false,
+        "combinationRecipe": [],
+        "irlImage": "https://drive.google.com/uc?export=download&id=1b5guYWrzCaw-oND2Ym1Aw9Qh5ioHGzlR"
+    }
+]

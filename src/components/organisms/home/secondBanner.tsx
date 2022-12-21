@@ -21,7 +21,7 @@ const SecondBannerOrganism = () => {
   const theme = useTheme();
   const styles = rootStyles(theme);
   const dataEvent: EventType[] = useSelector<RootState, any>(
-    (state) => state.app.dataEvent
+    (state) => state.app?.dataEvent
   );
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const [indexScroll, setIndex] = useState(0);
@@ -84,7 +84,7 @@ const SecondBannerOrganism = () => {
         }}
       />
       <View style={{ flexDirection: "row" }}>
-        {dataEvent?.map((item, index) => {
+        { dataEvent.length > 0 &&  dataEvent?.map((item, index) => {
           return (
             <View
               key={item.id}

@@ -5,14 +5,15 @@ import { images } from "@app/assets/images";
 
 
 interface ContentViewProps{
-    setShow:React.Dispatch<React.SetStateAction<boolean>>
+    
+    onPress:() => void
 }
 
-const ContentView = ({setShow}:ContentViewProps) => {
+const ContentView = ({onPress}:ContentViewProps) => {
   const theme = useTheme();
   const styles = rootStyles(theme);
   return (
-    <TouchableOpacity style={styles.firstView} onPress={() =>{setShow(true)}}>
+    <TouchableOpacity style={styles.firstView} onPress={onPress}>
       <View style={styles.secondView}>
         <Image
         source={images.startSquare}

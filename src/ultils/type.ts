@@ -1,4 +1,4 @@
-import { Dimensions ,Platform} from "react-native";
+import { Dimensions, Platform } from "react-native";
 export type Characters = {
   id: string;
   name: string;
@@ -9,18 +9,35 @@ export type Characters = {
   description: string;
   mission: string;
   dataMienNguocId: "1";
-  typeOf:"Characters"
+  typeOf: "Characters";
 };
 export type Items = {
   id: string;
   name: string;
-  type: string;
+  type: "exchange" | "material" | "primary";
   image: string;
   inSet: boolean;
   function: string;
   dataMienNguocId: "1";
-  typeOf:'Items'
+  typeOf: "Items";
+  setName: any;
+  usingIn: string;
+  isMaterial: boolean;
+  combinationRecipe: CombinationType[];
+  irlImage: string;
+  obtain: ObtainProps[];
+  description: string;
 };
+
+export type ObtainProps = {
+  map:"1" | "2",
+  obtain:string
+}
+export type CombinationType = {
+  name: string;
+  image: string;
+};
+
 export type Data = DataCharacters | DataItems;
 
 export type DataCharacters = {
@@ -32,13 +49,13 @@ export type DataItems = {
   data: Items[];
 };
 export type EventType = {
-  name:string,
-  image:string,
-  title:string,
-  description:string,
-  id:string,
-  startTime:number,
-  endTime:number
-}
+  name: string;
+  image: string;
+  title: string;
+  description: string;
+  id: string;
+  startTime: number;
+  endTime: number;
+};
 export const { width, height } = Dimensions.get("screen");
-export const isIos = Platform.OS === 'ios';
+export const isIos = Platform.OS === "ios";

@@ -10,13 +10,11 @@ import RootNavigator from "./src/navigation/root-navigatior";
 import * as SplashScreen from 'expo-splash-screen';
 export default function App() {
   const [fontsLoaded] = useFonts({
-    "Roboto-Bold": require("./assets/fonts/Roboto-Bold.ttf"),
-    "Roboto-Medium": require("./assets/fonts/Roboto-Medium.ttf"),
-    "Roboto-Light": require("./assets/fonts/Roboto-Light.ttf"),
-    "Roboto-Regular": require("./assets/fonts/Roboto-Regular.ttf"),
-    "Robot-Bold-Android":require("./assets/fonts/Roboto-Bold.otf"),
-    "Robot-Medium-Android":require("./assets/fonts/Roboto-Medium.otf"),
-    "Robot-Light-Android":require("./assets/fonts/Roboto-Light.otf"),
+    "Roboto-Bold": require("./assets/fonts/Roboto-Bold.otf"),
+    "Roboto-Medium": require("./assets/fonts/Roboto-Medium.otf"),
+    "Roboto-Light": require("./assets/fonts/Roboto-Light.otf"),
+    "Roboto-Regular": require("./assets/fonts/Roboto-Regular.otf"),
+    
 
   });
   const onLayoutRootView = useCallback(async () => {

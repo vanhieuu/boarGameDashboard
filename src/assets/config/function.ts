@@ -26,3 +26,10 @@ export function removeVietnameseTones(str:string) {
     str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g," ");
     return str;
 }
+
+export function isObjectEmpty(value:typeof Object) {
+    return (
+      Object.prototype.toString.call(value) === '[object Object]' &&
+      JSON.stringify(value) === '{}'
+    );
+  }

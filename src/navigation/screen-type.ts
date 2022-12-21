@@ -11,7 +11,8 @@ export enum APP_SCREEN  {
     BOTTOM_TAB = 'BOTTOM_TAB',
     GUIDE = 'GUIDE',
     AUTHEN ='AUTHEN',
-    UNAUTH ='UNAUTH'
+    UNAUTH ='UNAUTH',
+    LIST_CARDS ='LIST_CARDS'
 }
 
 export type BottomTabParamsList = {
@@ -22,6 +23,7 @@ export type BottomTabParamsList = {
 }
 
 export type AuthenScreenParamsList = {
+    [APP_SCREEN.BOTTOM_TAB]:undefined
     [APP_SCREEN.DETAILS_CHARACTERS]:{
         characters:Characters
     },
@@ -29,7 +31,7 @@ export type AuthenScreenParamsList = {
         items:Items
     },
     [APP_SCREEN.THIRD_DIMENSION_MODAL_VIEW]:undefined,
-    [APP_SCREEN.BOTTOM_TAB]:undefined
+    [APP_SCREEN.LIST_CARDS]:undefined
 }
 
 export type UnAuthenParamsList = {
@@ -38,6 +40,7 @@ export type UnAuthenParamsList = {
 
 
 export type RootStackParamsList = {
+    
    [APP_SCREEN.AUTHEN]: undefined;
    [APP_SCREEN.UNAUTH]:undefined;
-} & UnAuthenParamsList & AuthenScreenParamsList
+} & AuthenScreenParamsList & UnAuthenParamsList

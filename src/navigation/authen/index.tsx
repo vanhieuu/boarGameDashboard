@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { APP_SCREEN, AuthenScreenParamsList } from "../screen-type";
 import { BottomTab } from "../../components/pages/authen/bottomTab";
 import { DetailCharacters } from "../../components/pages/authen/detailChar";
+import { DetailItem } from "@app/components/pages/authen/detailItems";
 
 const Stack = createNativeStackNavigator<AuthenScreenParamsList>();
 
@@ -16,6 +17,10 @@ const AuthenticationStack = () => {
       <Stack.Screen
         name={APP_SCREEN.DETAILS_CHARACTERS}
         component={DetailCharacters}
+      />
+       <Stack.Screen
+        name={APP_SCREEN.DETAIL_ITEMS}
+        component={DetailItem}
       />
     </Stack.Navigator>
   );

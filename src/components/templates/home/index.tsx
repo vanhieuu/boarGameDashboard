@@ -1,4 +1,4 @@
-import { StyleSheet, View, ScrollView, Text } from "react-native";
+import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Constants from "expo-constants";
@@ -28,6 +28,8 @@ import { FirstBanner } from "@app/components/organisms/home/firstBanner";
 import { SecondBanner } from "@app/components/organisms/home/secondBanner";
 import { ThirdBanner } from "@app/components/organisms/home/thirdBanner";
 import { VideoPlay } from "@app/components/organisms/home/videoPlay";
+
+import { Text } from "@app/components/atoms/text";
 
 const HomePageTemplates = () => {
   const [loading, setLoading] = useState(false);
@@ -70,8 +72,8 @@ const HomePageTemplates = () => {
     }
   };
   return (
-    <>
-      <View style={styles(useTheme()).root}>
+    
+      <View style={[styles(useTheme()).root]}>
         <SearchBar setFilterData={setFilterData} setShow={setShow} />
         <SearchViewOrgan filterData={filterData} theme={theme} show={show} />
         <ScrollView style={styles(useTheme()).contentBottomView}>
@@ -79,17 +81,24 @@ const HomePageTemplates = () => {
           <SecondBanner />
           <ThirdBanner setShow={setShowVideo} />
         </ScrollView>
+        {showVideo && (
+        <View
+          style={styles(useTheme()).videoView}
+        >
+          <VideoPlay
+            show={showVideo}
+            videoRef={videoRef}
+            resizeMode={resizeMode}
+            setShow={setShowVideo}
+            setFullScreen={setFullScreen}
+            setResizeMode={setResizeMode}
+            setStatus={setStatus}
+          />
+        </View>
+      )}
       </View>
-      <VideoPlay
-        show={showVideo}
-        videoRef={videoRef}
-        resizeMode={resizeMode}
-        setShow={setShowVideo}
-        setFullScreen={setFullScreen}
-        setResizeMode={setResizeMode}
-        setStatus={setStatus}
-      />
-    </>
+      
+    
   );
 };
 
@@ -110,4 +119,13 @@ const styles = (theme: AppTheme) =>
       //   backgroundColor:'blue',
       width: "100%",
     },
+    videoView:{
+      width: "100%",
+      height: height,
+      backgroundColor: "black",
+      opacity: 0.85,
+      backfaceVisibility: "visible",
+      // zIndex:1000000,
+      position: "absolute",
+    }
   });
