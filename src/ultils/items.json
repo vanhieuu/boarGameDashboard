@@ -12,7 +12,9 @@
         "isMaterial": false,
         "combinationRecipe": [],
         "irlImage": "https://drive.google.com/uc?export=download&id=1cuhlHK2ZQOlTx04KKvpa9xq__I34XI0F",
-        "obtain": "Nhận vật phẩm tại các ô đặc biệt trên bàn cờ",
+        "obtain": [
+            "Nhận vật phẩm tại các ô đặc biệt trên bàn cờ"
+        ],
         "description": "Theo phong tục của đồng bào Thái, khi người con trai đi lấy vợ, ngoài đảm nhiệm bữa tiệc cưới bên gia đình nhà gái thì nhà trai (chú rể) còn phải mang theo đồng bạc (gọi là ngân hạo, ngân mằn thảu) để cầu hôn và làm quà biếu bố mẹ vợ."
     },
     {
@@ -21,10 +23,12 @@
         "type": "exchange",
         "dataMienNguocId": "1",
         "typeOf": "Items",
-        "image": "https://drive.google.com/uc?export=download&id=1eQvuBvJLd3BKlaRHURLMbpVPaM9r3JdB",
+        "image": "https://drive.google.com/uc?export=download&id=1ZZN0CqC_LnqkPWFIF5RBdzdQhrk3e8Rs",
         "inSet": false,
         "description": "Với đồng bào các dân tộc Thái, con ngựa là vật nuôi không thể thiếu trong nhà. Từ xa xưa, việc đi săn, đi hái lượm trong rừng là việc thường ngày của đồng bào, và những con ngựa là phương tiện để vượt núi, vượt khe, qua suối để vào rừng. Ngồi trên yên ngựa, các chàng trai thỏa sức đuổi theo các con thú thể hiện tài năng săn bắn của mình. Đây cũng là phương tiện để các chàng trai đi hỏi vợ, đưa vợ con về thăm mẹ cha. Bao đồ đạc cồng kềnh, nặng nề ngựa đều kham cả.",
-        "obtain": "Nhận vật phẩm tại các ô Chuồng ngựa trên bàn cờ.",
+        "obtain": [
+            "Nhận vật phẩm tại các ô Chuồng ngựa trên bàn cờ."
+        ],
         "usingIn": "all",
         "setName": null,
         "isMaterial": false,
@@ -40,7 +44,9 @@
         "image": "https://drive.google.com/uc?export=download&id=19mxytgxlIyGqBNvZgCvP69NC7QOxZxwq",
         "inSet": false,
         "description": "Cũng như nhiều dân tộc có cùng phương thức canh tác lúa nước, người Thái dùng trâu làm sức kéo để khai đất vỡ hoang, cày bừa... Vì thế, con trâu đã gắn liền với nhiều mặt đời sống sinh hoạt và tâm linh của người Thái. Trong sản xuất nông nghiệp, con trâu là đầu cơ nghiệp, trong các nghi lễ thiêng liêng con trâu là vật hiến sinh không thể thiếu",
-        "obtain": "Nhận vật phẩm tại các ô Chuồng trâu trên bàn cờ.",
+        "obtain": [
+            "Nhận vật phẩm tại các ô Chuồng trâu trên bàn cờ."
+        ],
         "usingIn": "all",
         "setName": null,
         "isMaterial": false,
@@ -56,7 +62,9 @@
         "image": "https://drive.google.com/uc?export=download&id=12-AHsH_RHVnL0nWOY1lT39j28NFEUn2M",
         "inSet": false,
         "description": "Quặng sắt là loại đất đá chứa nhiều khoáng chất khác nhau như kim loại, đá quý và được khai thác tại các mỏ khoáng sản lớn. Từ việc khai thác quặng sắt, sẽ luyện ra thành sắt và các hợp kim của sắt dùng để chế tạo rất nhiều sản phẩm ứng dụng trong đời sống.",
-        "obtain": "Nhận vật phẩm tại các ô Quặng sắt trên bàn cờ",
+        "obtain": [
+            "Nhận vật phẩm tại các ô Quặng sắt trên bàn cờ"
+        ],
         "usingIn": "all",
         "setName": null,
         "isMaterial": false,

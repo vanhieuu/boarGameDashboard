@@ -1,18 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { isEqual } from 'lodash';
-
-
-
+import React from "react";
+import { isEqual } from "lodash";
+import { RouteProp, useRoute } from "@react-navigation/native";
+import { APP_SCREEN, RootStackParamsList } from "@app/navigation/screen-type";
+import { DetailItemsTemp } from "@app/components/templates/detailItems/detailItemsTemp";
 
 const DetailItemScreen = () => {
-  return (
-    <View>
-      <Text>DetailItemScreen</Text>
-    </View>
-  )
-}
+  const items =
+    useRoute<RouteProp<RootStackParamsList, APP_SCREEN.DETAIL_ITEMS>>().params
+      .items;
 
-export const DetailItem = React.memo(DetailItemScreen,isEqual)
+  return <DetailItemsTemp items={items} />;
+};
 
-const styles = StyleSheet.create({})
+export const DetailItem = React.memo(DetailItemScreen, isEqual);

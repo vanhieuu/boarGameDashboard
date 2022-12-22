@@ -16,5 +16,6 @@ export const images = {
     Cloud1:require('./source/Cloud1.png'),
     Cloud2:require('./source/Cloud2.png'),
     imageHome:require('./source/imageHome.png'),
+    borderView:require('./source/BorderView.png')
 }
 export type ImageTypes = keyof typeof images

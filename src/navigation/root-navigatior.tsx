@@ -16,10 +16,10 @@ const RootStack = createNativeStackNavigator<RootStackParamsList>();
 const RootNavigator = () => {
   return (
     <SafeAreaProvider>
-      <NavigationContainer ref={navigationRef} theme={MyAppTheme['default']}>
+      <NavigationContainer ref={navigationRef} theme={MyAppTheme['default']}  >
         <RootStack.Navigator 
         initialRouteName={APP_SCREEN.UNAUTH}
-        screenOptions={{headerShown:false}}
+        screenOptions={{headerShown:false,gestureEnabled:false}}
         >
             <RootStack.Screen  name={APP_SCREEN.UNAUTH} component={UnAuthentication}  />
             <RootStack.Screen  name={APP_SCREEN.AUTHEN} component={AuthenticationStack}   />

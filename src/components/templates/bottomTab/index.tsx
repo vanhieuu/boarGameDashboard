@@ -1,4 +1,4 @@
-import { StyleSheet,  View } from "react-native";
+import { StyleSheet,  View ,BackHandler} from "react-native";
 import React from "react";
 import { useTransitionProgress } from "react-native-screens";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -17,6 +17,13 @@ const Tab = createBottomTabNavigator<BottomTabParamsList>();
 
 const BottomTabTemplates = () => {
   const createStyle = styles(useTheme());
+  React.useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      () => true
+    );
+    return () => backHandler.remove();
+  }, []);
 
   return (
     <View style={createStyle.container}>
@@ -24,9 +31,11 @@ const BottomTabTemplates = () => {
         screenOptions={{
           headerShown: false,
           ...useTransitionProgress,
+        
         }}
         tabBar={(props?: any) => <BottomBar {...props} />}
         sceneContainerStyle={{ backgroundColor: "transparent" }}
+        
       >
         <Tab.Screen component={HomePage} name={APP_SCREEN.HOME_PAGE} />
         <Tab.Screen

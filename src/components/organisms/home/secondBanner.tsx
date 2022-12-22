@@ -4,7 +4,7 @@ import {
   View,
   Animated,
   Image,
-  TouchableOpacity,
+  TouchableWithoutFeedback
 } from "react-native";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
@@ -70,7 +70,7 @@ const SecondBannerOrganism = () => {
                 transform: [{ scale }],
               }}
             >
-              <TouchableOpacity>
+              <TouchableWithoutFeedback>
                 <Image
                   source={{ uri: item.image }}
                   style={{
@@ -78,7 +78,7 @@ const SecondBannerOrganism = () => {
                     height: ITEM_HEIGHT,
                   }}
                 />
-              </TouchableOpacity>
+              </TouchableWithoutFeedback>
             </Animated.View>
           );
         }}

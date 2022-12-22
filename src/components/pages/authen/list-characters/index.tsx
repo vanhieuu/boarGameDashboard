@@ -6,8 +6,11 @@ import {
   Text,
   TouchableOpacity,
   View,
+  BackHandler,
 } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
+import { SearchViewOrgan } from "@app/components/organisms/searchView";
+import { SearchBar } from "@app/components/molecules/searchBar";
 import { AppTheme, useTheme } from "../../../../theme";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../assets/store/store";
@@ -15,9 +18,13 @@ import { Characters } from "../../../../ultils/type";
 import Constants from "expo-constants";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { navigate } from "../../../../navigation/navigation-services";
+import {
+  goBack,
+  navigate,
+  pop,
+} from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
-import { SearchBar } from "@app/components/molecules/searchBar";
+import { useNavigation } from "@react-navigation/native";
 
 const { width, height } = Dimensions.get("screen");
 const ITEM_SIZE = 180;
@@ -37,6 +44,7 @@ const ListCharactersScreens = () => {
 
   const [currentIndex, setCurrentIndex] = useState(listCharacters[0]);
   const [show, setShow] = useState(false);
+  const navigation = useNavigation();
   const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
   useEffect(() => {
     Animated.spring(scrollXAnimation, {
@@ -45,95 +53,19 @@ const ListCharactersScreens = () => {
     }).start();
   }, []);
 
+  React.useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      () => true
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
   return (
     <SafeAreaProvider style={styles.root}>
       <SearchBar setFilterData={setFilterData} setShow={setShow} />
-      {show && (
-        <View style={styles.filterItemView}>
-          <View
-            style={{
-              marginHorizontal: 20,
-              backgroundColor: theme.colors.background,
-            }}
-            // onTouchStart={() => setShow(false)}
-          >
-            {filterData.length > 0 ? (
-              filterData.map((item: any, index) => {
-                return (
-                  <TouchableOpacity
-                    key={index}
-                    style={{
-                      flexDirection: "row",
-                      alignItems: "center",
-                      marginTop: 10,
-                    }}
-                    onPress={() => {
-                      if (item.typeOf === "Characters") {
-                        navigate(APP_SCREEN.DETAILS_CHARACTERS, {
-                          characters: item,
-                        });
-                      } else {
-                        navigate(APP_SCREEN.DETAIL_ITEMS, {
-                          items: item,
-                        });
-                      }
-                    }}
-                  >
-                  {item.irlImage == undefined ?   <Image
-                      source={{ uri: item.chess  }}
-                      style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 40,
-                      }}
-                      resizeMode="contain"
-                    /> :   <Image
-                    source={{ uri: item.image  }}
-                    style={{
-                      width: 30,
-                      height: 30,
-                      borderRadius: 40,
-                    }}
-                    resizeMode="contain"
-                  /> }
-                   
-                    <View>
-                      <Text
-                        style={{
-                          fontSize: 16,
-                          fontWeight: "bold",
-                          color: theme.colors.black,
-                        }}
-                      >
-                        {item.name}
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: 12,
-                          fontWeight: "200",
-                          color: theme.colors.border,
-                        }}
-                      >
-                        {item.type === "exchange"
-                          ? "Trao đổi"
-                          : item.type === "material"
-                          ? "Nguyên liệu"
-                          : item.type === "primary"
-                          ? "Vật phẩm chính"
-                          : item.type}
-                      </Text>
-                    </View>
-                  </TouchableOpacity>
-                );
-              })
-            ) : (
-              <View style={{ backgroundColor: theme.colors.background }}>
-                <Text>Không tìm thấy</Text>
-              </View>
-            )}
-          </View>
-        </View>
-      )}
+      <SearchViewOrgan filterData={filterData} show={show} theme={theme} />
 
       <View
         style={{
