@@ -1,23 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { useTheme } from '../../../../theme'
+import React from "react";
+import { useSelector } from "react-redux";
+import { Items } from "@app/ultils/type";
+import { ListItemsTemp } from "@app/components/templates/listItems/ListItemTemp";
 
 const ListItemsScreens = () => {
-  const theme = useTheme()
-  return (
-    <View
-    style={{
-      flex:1,
-      justifyContent: 'center',
-      alignItems:'center',
-      backgroundColor:theme.colors.background
-    }}
-    >
-      <Text>ListItemsScreens</Text>
-    </View>
-  )
-}
+  const items: Items[] = useSelector((state: any) => state.items.items);
+ 
 
-export const  ListItems = React.memo(ListItemsScreens)
+  return <ListItemsTemp items={items} />;
+};
 
-const styles = StyleSheet.create({})
+export const ListItems = React.memo(ListItemsScreens);
+

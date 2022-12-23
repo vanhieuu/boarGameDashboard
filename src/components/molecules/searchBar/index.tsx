@@ -11,7 +11,7 @@ import { removeVietnameseTones } from "./../../../assets/config/function";
 const { width, height } = Dimensions.get("screen");
 
 interface SearchProps {
-  setFilterData: React.Dispatch<React.SetStateAction<Characters[]>>;
+  setFilterData: React.Dispatch<React.SetStateAction<any[]>>;
 
   setShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -70,6 +70,7 @@ const rootStyles = (theme: AppTheme) =>
       marginTop: Constants.statusBarHeight + (height > 800 ? 10 : 0),
       alignItems: "center",
       flexDirection: "row",
+      
     },
     iconView: {
       position: "absolute",

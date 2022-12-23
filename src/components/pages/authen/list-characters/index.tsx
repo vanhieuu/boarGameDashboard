@@ -19,9 +19,9 @@ import Constants from "expo-constants";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
-  goBack,
+ 
   navigate,
-  pop,
+  
 } from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
 import { useNavigation } from "@react-navigation/native";
@@ -44,7 +44,7 @@ const ListCharactersScreens = () => {
 
   const [currentIndex, setCurrentIndex] = useState(listCharacters[0]);
   const [show, setShow] = useState(false);
-  const navigation = useNavigation();
+
   const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
   useEffect(() => {
     Animated.spring(scrollXAnimation, {
