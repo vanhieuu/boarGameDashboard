@@ -43,7 +43,7 @@ const SecondBannerOrganism = () => {
     const { sound } = await Audio.Sound.createAsync(
       require("../../../../assets/sound/click.mp3")
     );
-    console.log("play");
+   
     setSound(sound);
 
     await sound.playAsync();
@@ -62,7 +62,7 @@ const SecondBannerOrganism = () => {
     return swipeEffect
       ? () => {
           swipeEffect.unloadAsync();
-          console.log("unload");
+        
         }
       : undefined;
   }, [indexScroll]);

@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Miền Ngược",
-    "slug": "board-game",
-    "version": "1.0.3",
+    "slug": "@dieutrang/MienNguoc",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -36,7 +36,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.dieutrang.boardgame",
-      "versionCode": 3
+      "versionCode": 4
     },
     "web": {
       "favicon": "./assets/favicon.png"

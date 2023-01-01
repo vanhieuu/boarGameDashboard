@@ -66,7 +66,7 @@ const VideoPlayOrganisms = ({
               resizeMode={resizeMode}
               isLooping
               onFullscreenUpdate={(event) => {
-                console.log(event.fullscreenUpdate);
+               
                 if (event.fullscreenUpdate === 1) {
                   setResizeMode(ResizeMode.CONTAIN);
                   setFullScreen(true);

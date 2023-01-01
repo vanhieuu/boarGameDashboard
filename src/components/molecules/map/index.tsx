@@ -20,7 +20,6 @@ interface MapProps {
 }
 
 const MapMoleculseComponents = ({ currentScreen, dataMap }: MapProps) => {
-  console.log(dataMap.Map2)
   return (
     <View>
       {currentScreen === "MAP1" ? (

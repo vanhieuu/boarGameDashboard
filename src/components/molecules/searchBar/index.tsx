@@ -44,7 +44,7 @@ const SearchBarMolecules = ({ setFilterData, setShow }: SearchProps) => {
       setShow(false);
     }
   }, 400);
-  //   console.log(data, "filterData");
+  
 
   return (
     <>

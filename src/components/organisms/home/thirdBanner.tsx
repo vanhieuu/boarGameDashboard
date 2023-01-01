@@ -18,7 +18,7 @@ const ThirdBannerOrganisms = ({ setShow }: ThirdBannerProps) => {
   const theme = useTheme();
 
   async function clickSound() {
-    console.log("Loading Sound");
+  
     const { sound } = await Audio.Sound.createAsync(
       require("../../../../assets/sound/click.mp3")
     );

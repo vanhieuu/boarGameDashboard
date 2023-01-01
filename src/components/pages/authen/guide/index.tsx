@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 const GuideScreens = () => {
   const theme = useTheme();
   const location = useSelector<RootState,any>(state => state.app.dataLocation)
-  console.log(location,'map1')
+
   return <MapOrganisms theme={theme} location={location} />;
 };
 

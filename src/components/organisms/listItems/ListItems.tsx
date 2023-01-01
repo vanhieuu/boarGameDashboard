@@ -42,7 +42,7 @@ const ListItemsOrganism = ({ items }: ListItemsProps) => {
                     onClick()
                     navigate(APP_SCREEN.DETAIL_ITEMS, { items: item })
                   }
-                  // console.log(item.obtain)
+                  
                 }
               >
                 <ImageBackground

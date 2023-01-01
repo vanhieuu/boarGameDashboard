@@ -10,27 +10,39 @@ import RootNavigator from "./src/navigation/root-navigatior";
 import * as SplashScreen from "expo-splash-screen";
 import { Audio } from "expo-av";
 import { Sound } from "expo-av/build/Audio";
+import { Platform } from "react-native";
 
 export default function App() {
   const [sound, setSound] = React.useState<Sound>();
 
+  const enableAudio = async () => {
+    await Audio.setAudioModeAsync({
+      playsInSilentModeIOS: Platform.OS === "ios" ? true : false,
+      shouldDuckAndroid: true,
+      staysActiveInBackground: Platform.OS === "ios" ? true : false,
+      allowsRecordingIOS: Platform.OS === "ios" ? true : false,
+    });
+  };
+
   async function playSound() {
-    console.log("Loading Sound");
+
     const { sound } = await Audio.Sound.createAsync(
       require("./assets/sound/themeSound.mp3")
     );
-    
+
     setSound(sound);
- 
+
     await sound.playAsync();
-    await sound.setIsLoopingAsync(true)
-    
+    await sound.setVolumeAsync(0.15);
+    await sound.setIsLoopingAsync(true);
   }
 
-  // React.useEffect(() => {
-  //   playSound();
-  //   return;
-  // }, []);
+  React.useEffect(() => {
+    enableAudio();
+    Audio.requestPermissionsAsync();
+    playSound();
+    return;
+  }, []);
 
   const [fontsLoaded] = useFonts({
     "Roboto-Bold": require("./assets/fonts/Roboto-Bold.otf"),

@@ -43,7 +43,6 @@ const ListCharactersScreens = () => {
   const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
 
   async function clickSound() {
-    console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync(
       require("../../../../../assets/sound/click.mp3")
     );
@@ -52,21 +51,21 @@ const ListCharactersScreens = () => {
   }
 
   async function onSwipe() {
-    const {sound} = await Audio.Sound.createAsync(require("../../../../../assets/sound/swipe.mp3"))
+    const { sound } = await Audio.Sound.createAsync(
+      require("../../../../../assets/sound/swipe.mp3")
+    );
     return await sound.playAsync();
   }
-
 
   useEffect(() => {
     Animated.spring(scrollXAnimation, {
       toValue: scrollXIndex,
       useNativeDriver: true,
     }).start();
-
   }, []);
-  useMemo(() =>{
-    onSwipe()
-  },[currentIndex])
+  useMemo(() => {
+    onSwipe();
+  }, [currentIndex]);
 
   React.useEffect(() => {
     const backHandler = BackHandler.addEventListener(
