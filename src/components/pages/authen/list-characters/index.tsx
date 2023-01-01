@@ -8,24 +8,19 @@ import {
   View,
   BackHandler,
 } from "react-native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import Constants from "expo-constants";
+import { useSelector } from "react-redux";
 import { SearchViewOrgan } from "@app/components/organisms/searchView";
 import { SearchBar } from "@app/components/molecules/searchBar";
+
 import { AppTheme, useTheme } from "../../../../theme";
-import { useSelector } from "react-redux";
 import { RootState } from "../../../../assets/store/store";
 import { Characters } from "../../../../ultils/type";
-import Constants from "expo-constants";
-
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import {
- 
-  navigate,
-  
-} from "../../../../navigation/navigation-services";
+import { navigate } from "../../../../navigation/navigation-services";
 import { APP_SCREEN } from "../../../../navigation/screen-type";
-import { useNavigation } from "@react-navigation/native";
-
+import { Audio } from "expo-av";
 const { width, height } = Dimensions.get("screen");
 const ITEM_SIZE = 180;
 const ITEM_HEIGHT = width * 0.8 * 1.7;
@@ -46,12 +41,32 @@ const ListCharactersScreens = () => {
   const [show, setShow] = useState(false);
 
   const [filterData, setFilterData] = useState<Characters[]>(listCharacters);
+
+  async function clickSound() {
+    console.log("Loading Sound");
+    const { sound } = await Audio.Sound.createAsync(
+      require("../../../../../assets/sound/click.mp3")
+    );
+
+    await sound.playAsync();
+  }
+
+  async function onSwipe() {
+    const {sound} = await Audio.Sound.createAsync(require("../../../../../assets/sound/swipe.mp3"))
+    return await sound.playAsync();
+  }
+
+
   useEffect(() => {
     Animated.spring(scrollXAnimation, {
       toValue: scrollXIndex,
       useNativeDriver: true,
     }).start();
+
   }, []);
+  useMemo(() =>{
+    onSwipe()
+  },[currentIndex])
 
   React.useEffect(() => {
     const backHandler = BackHandler.addEventListener(
@@ -133,6 +148,7 @@ const ListCharactersScreens = () => {
             >
               <TouchableOpacity
                 onPress={() => {
+                  clickSound();
                   navigate(APP_SCREEN.DETAILS_CHARACTERS, {
                     characters: item,
                   });

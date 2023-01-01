@@ -37,7 +37,7 @@ const ObtainItemViewOrganisms = ({ items }: ObtainProps) => {
         })
       ) : (
         <View>
-          <Text>{items.obtain[0]}</Text>
+          <Text>{items.obtain[0].obtain || items.obtain[0]}</Text>
         </View>
       )}
     </View>

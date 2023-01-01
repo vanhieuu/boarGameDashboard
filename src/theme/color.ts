@@ -22,7 +22,9 @@ export const ColorDefault = {
     border: '#ccc',
     notification: '#3e3e3e',
     searchBar:'#64632C',
-    textTab:"#292763"
+    textTab:"#292763",
+    transparent:"transparent",
+    backgroundOpacity:"#FFF0E1E5"
 }
 
 
@@ -50,5 +52,7 @@ export const ColorDark = {
     border: '#ccc',
     notification: '#3e3e3e',
     searchBar:'#64632C',
-    textTab:"#292763"
+    textTab:"#292763",
+    transparent:"transparent",
+    backgroundOpacity:"#FFF0E1E5"
 }

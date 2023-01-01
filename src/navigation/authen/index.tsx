@@ -5,6 +5,7 @@ import { APP_SCREEN, AuthenScreenParamsList } from "../screen-type";
 import { BottomTab } from "../../components/pages/authen/bottomTab";
 import { DetailCharacters } from "../../components/pages/authen/detailChar";
 import { DetailItem } from "@app/components/pages/authen/detailItems";
+import ListCardPage from "@app/components/pages/authen/listCard";
 
 const Stack = createNativeStackNavigator<AuthenScreenParamsList>();
 
@@ -25,6 +26,8 @@ const AuthenticationStack = () => {
         component={DetailCharacters}
       />
       <Stack.Screen name={APP_SCREEN.DETAIL_ITEMS} component={DetailItem} />
+      <Stack.Screen name={APP_SCREEN.LIST_CARDS} component={ListCardPage} />
+
     </Stack.Navigator>
   );
 };

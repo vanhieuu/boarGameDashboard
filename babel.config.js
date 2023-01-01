@@ -16,7 +16,8 @@ module.exports = function(api) {
             "@assets-image":"./src/assets/images/",
             "@assets-icon":"./src/assets/icons/",
             "@navigation-service":"./src/navigation/navigation-services.tsx",
-            "@navigation":"./src/navigation/"
+            "@navigation":"./src/navigation/",
+            "@sound":"./assets/sound/*"
           },
         },
       ],

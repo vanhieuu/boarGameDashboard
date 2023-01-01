@@ -1,4 +1,4 @@
-import { StyleSheet, View, ScrollView, TouchableOpacity } from "react-native";
+import { StyleSheet, View, ScrollView,  } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Constants from "expo-constants";
@@ -11,15 +11,17 @@ import { isEqual } from "lodash";
 import { onSetItem } from "@app/assets/store/api/slice/item";
 import {
   onSetData,
-  onSetDataEvent,
+  onSetDataCard,
+  onSetDataLocation,
 } from "@app/assets/store/api/slice/appSlice";
 import { RootState } from "@app/assets/store/store";
 import { SearchBar } from "@app/components/molecules/searchBar";
 import { SearchViewOrgan } from "@app/components/organisms/searchView";
 import {
+  apiGetCard,
   apiGetDataCharacters,
-  apiGetEvent,
   apiGetItems,
+  apiGetMapLocation,
 } from "@app/assets/store/api";
 import { onSetCharacters } from "@app/assets/store/api/slice/characters";
 import { height } from "@app/ultils/type";
@@ -28,8 +30,6 @@ import { FirstBanner } from "@app/components/organisms/home/firstBanner";
 import { SecondBanner } from "@app/components/organisms/home/secondBanner";
 import { ThirdBanner } from "@app/components/organisms/home/thirdBanner";
 import { VideoPlay } from "@app/components/organisms/home/videoPlay";
-
-import { Text } from "@app/components/atoms/text";
 
 const HomePageTemplates = () => {
   const [loading, setLoading] = useState(false);
@@ -53,9 +53,17 @@ const HomePageTemplates = () => {
         dispatch(onSetData(res.concat(item)));
       });
     });
-    apiGetEvent().then((res) => {
-      dispatch(onSetDataEvent(res));
+   
+    apiGetCard().then((res) => {
+      dispatch(onSetDataCard(res));
     });
+    apiGetMapLocation().then((res) => {
+      dispatch(onSetDataLocation(res[0]));
+    });
+
+    return () => {
+      setLoading(false);
+    };
   }, []);
 
   useEffect(() => {
@@ -72,19 +80,16 @@ const HomePageTemplates = () => {
     }
   };
   return (
-    
-      <View style={[styles(useTheme()).root]}>
-        <SearchBar setFilterData={setFilterData} setShow={setShow} />
-        <SearchViewOrgan filterData={filterData} theme={theme} show={show} />
-        <ScrollView style={styles(useTheme()).contentBottomView}>
-          <FirstBanner />
-          <SecondBanner />
-          <ThirdBanner setShow={setShowVideo} />
-        </ScrollView>
-        {showVideo && (
-        <View
-          style={styles(useTheme()).videoView}
-        >
+    <View style={[styles(useTheme()).root]}>
+      <SearchBar setFilterData={setFilterData} setShow={setShow} />
+      <SearchViewOrgan filterData={filterData} theme={theme} show={show} />
+      <ScrollView style={styles(useTheme()).contentBottomView}>
+        <FirstBanner />
+        <SecondBanner />
+        <ThirdBanner setShow={setShowVideo} />
+      </ScrollView>
+      {showVideo && (
+        <View style={styles(useTheme()).videoView}>
           <VideoPlay
             show={showVideo}
             videoRef={videoRef}
@@ -96,9 +101,7 @@ const HomePageTemplates = () => {
           />
         </View>
       )}
-      </View>
-      
-    
+    </View>
   );
 };
 
@@ -119,7 +122,7 @@ const styles = (theme: AppTheme) =>
       //   backgroundColor:'blue',
       width: "100%",
     },
-    videoView:{
+    videoView: {
       width: "100%",
       height: height,
       backgroundColor: "black",
@@ -127,5 +130,5 @@ const styles = (theme: AppTheme) =>
       backfaceVisibility: "visible",
       // zIndex:1000000,
       position: "absolute",
-    }
+    },
   });

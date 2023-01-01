@@ -3,61 +3,46 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  Text,
   View,
+  Text,
 } from "react-native";
 import React, { memo } from "react";
 import { images } from "../../../assets/images";
+import MapViewMolecules from "./mapView";
+import { DataMap } from "@app/ultils/type";
+import LocationViewMolecules from "./locationView";
 
 const width = Dimensions.get("screen").width;
 
 interface MapProps {
   currentScreen: string;
+  dataMap: DataMap;
 }
 
-const MapMoleculseComponents = ({ currentScreen }: MapProps) => {
+const MapMoleculseComponents = ({ currentScreen, dataMap }: MapProps) => {
+  console.log(dataMap.Map2)
   return (
-    <ScrollView
-      style={{
-        width: "100%",
-      }}
-      horizontal={true}
-      showsHorizontalScrollIndicator={false}
-      decelerationRate="fast"
-      bounces={false}
-    >
+    <View>
       {currentScreen === "MAP1" ? (
-        <View style={{ flexDirection: "row" }}>
-          <Image
-            source={images.map1_1}
-            style={{ width: width, height: width }}
+        <View style={{flex:1}}>
+          <MapViewMolecules
+            image1={images.Map1_1}
+            image2={images.Map1_2}
+            image3={images.Map1_3}
           />
-          <Image
-            source={images.map1_2}
-            style={{ width: width, height: width }}
-          />
-          <Image
-            source={images.map1_3}
-            style={{ width: width, height: width }}
-          />
+         <LocationViewMolecules dataMap={dataMap.Map1}/>
         </View>
       ) : (
-        <View style={{ flexDirection: "row" }}>
-          <Image
-            source={images.map2_1}
-            style={{ width: width, height: width }}
+        <View>
+          <MapViewMolecules
+            image1={images.Map2_1}
+            image2={images.Map2_2}
+            image3={images.Map2_3}
           />
-          <Image
-            source={images.map2_2}
-            style={{ width: width, height: width }}
-          />
-          <Image
-            source={images.map2_3}
-            style={{ width: width, height: width }}
-          />
+            <LocationViewMolecules dataMap={dataMap.Map2}/>
         </View>
       )}
-    </ScrollView>
+    </View>
   );
 };
 

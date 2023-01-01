@@ -3,6 +3,7 @@ import React, { memo } from "react";
 import { AppTheme, useTheme } from "@app/theme";
 import { Icons } from "@app/components/atoms/icon/icons";
 import { Items } from "@app/ultils/type";
+import { onClick } from "../soundEffect/click";
 
 interface FilterViewProps {
   show: boolean;
@@ -44,6 +45,7 @@ const FilterViewMolecules = ({
         <TouchableOpacity
           style={styles.filterContent}
           onPress={() => {
+            onClick()
             setShow(!show);
           }}
         >
@@ -62,6 +64,7 @@ const FilterViewMolecules = ({
               <TouchableOpacity
                 key={item.id.toString()}
                 onPress={() => {
+                  onClick()
                   setValue(item.name);
                 }}
                 style={styles.itemView}

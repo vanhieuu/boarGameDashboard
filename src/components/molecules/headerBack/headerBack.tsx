@@ -4,6 +4,7 @@ import { Icons } from '@app/components/atoms/icon/icons'
 import { AppTheme, useTheme } from '@app/theme';
 import Constants from "expo-constants";
 import { height } from '@app/ultils/type';
+import { onClick } from '../soundEffect/click';
 
 interface HeaderBackProps{
   onPress:() => void;
@@ -17,7 +18,10 @@ const HeaderBackMolecules = ({onPress,title}:HeaderBackProps) => {
   return (
     <View style={styles.headerView}>
         <TouchableOpacity style={styles.borderIcon} onPress={onPress}>
-          <Icons icon="iconBack" size={20} resizeMode="contain" />
+          <Icons icon="iconBack" size={20} resizeMode="contain" onPress={() => {
+            onClick(),
+            onPress()
+          }} />
         </TouchableOpacity>
 
         <View style={styles.titleView}>

@@ -29,10 +29,6 @@ export type Items = {
   description: string;
 };
 
-
-
-  
-
 export type CombinationType = {
   name: string;
   image: string;
@@ -50,12 +46,37 @@ export type DataItems = {
 };
 export type EventType = {
   name: string;
-  image: string;
+  image: any;
   title: string;
   description: string;
   id: string;
   startTime: number;
   endTime: number;
+  linking:string
 };
 export const { width, height } = Dimensions.get("screen");
 export const isIos = Platform.OS === "ios";
+
+export type Cards = {
+  id: string;
+  name: string;
+  description: string;
+  usingIn: string;
+  image: string;
+  borderColor:string
+};
+
+export type DataMap = {
+  id:string,
+  Map1:Map[],
+  Map2:Map[]
+}
+export type Map ={
+  name:string,
+  id:string,
+  image:string,
+  function:string,
+  description:string,
+  LocationId:string,
+  shadowImage:string
+}

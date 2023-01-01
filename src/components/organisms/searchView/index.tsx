@@ -5,6 +5,7 @@ import { AppTheme } from "@app/theme";
 import { navigate } from "@app/navigation/navigation-services";
 import { APP_SCREEN } from "@app/navigation/screen-type";
 import { Data, height, width } from "@app/ultils/type";
+import { onClick } from "@app/components/molecules/soundEffect/click";
 
 interface SearchViewOrganProps {
   show: boolean;
@@ -41,6 +42,7 @@ const SearchViewOrganism = ({
                       marginTop: 10,
                     }}
                     onPress={() => {
+                      onClick()
                       if (item.typeOf === "Characters") {
                         navigate(APP_SCREEN.DETAILS_CHARACTERS, {
                           characters: item,

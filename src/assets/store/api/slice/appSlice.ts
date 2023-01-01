@@ -4,7 +4,9 @@ import { PayloadAction } from "@reduxjs/toolkit/dist/createAction";
 
 const initialState = {
   data: [],
-  dataEvent:{}
+  dataEvent:{},
+  dataLocation:{},
+  dataCard:{}
 };
 
 export const appSlice = createSlice({
@@ -19,10 +21,12 @@ export const appSlice = createSlice({
     },
     onSetDataEvent:(state,action:PayloadAction<any>) =>{
       state.dataEvent = action.payload
-    }
+    },
+    onSetDataLocation:(state,action:PayloadAction<any>) =>{state.dataLocation = action.payload},
+    onSetDataCard:(state,action:PayloadAction<any>) => {state.dataCard = action.payload}
     
   },
 });
 
-export const { onSetData,onSetMoreData,onSetDataEvent } = appSlice.actions;
+export const { onSetData,onSetMoreData,onSetDataEvent ,onSetDataCard,onSetDataLocation} = appSlice.actions;
 export default appSlice.reducer;

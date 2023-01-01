@@ -4,14 +4,18 @@ import {
   View,
   Animated,
   Image,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
 } from "react-native";
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useMemo, useState } from "react";
+
 import { AppTheme, useTheme } from "@app/theme";
-import { EventType, width } from "@app/ultils/type";
-import { RootState } from "@app/assets/store/store";
+import { width } from "@app/ultils/type";
+
 import { icons } from "@app/assets/icons";
+import { dataEvent } from "@app/ultils/event";
+import * as Linking from "expo-linking";
+import { Audio } from "expo-av";
+import { Sound } from "expo-av/build/Audio";
 
 const ITEM_SIZE = width;
 const ITEM_SPACING = (width - ITEM_SIZE) / 2;
@@ -20,11 +24,49 @@ const ITEM_HEIGHT = width * (156 / 375);
 const SecondBannerOrganism = () => {
   const theme = useTheme();
   const styles = rootStyles(theme);
-  const dataEvent: EventType[] = useSelector<RootState, any>(
-    (state) => state.app?.dataEvent
-  );
+  const [sound, setSound] = React.useState<Sound>();
+
   const scrollX = React.useRef(new Animated.Value(0)).current;
   const [indexScroll, setIndex] = useState(0);
+  const [swipeEffect, setSwipeEffect] = useState<Sound>();
+
+  const swipe = async () => {
+    const { sound } = await Audio.Sound.createAsync(
+      require("../../../../assets/sound/swipe.mp3")
+    );
+    setSwipeEffect(sound);
+
+    return await sound.playAsync();
+  };
+
+  async function playSound() {
+    const { sound } = await Audio.Sound.createAsync(
+      require("../../../../assets/sound/click.mp3")
+    );
+    console.log("play");
+    setSound(sound);
+
+    await sound.playAsync();
+  }
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          sound.unloadAsync();
+        }
+      : undefined;
+  }, [sound]);
+
+  React.useMemo(() => {
+    swipe()
+    return swipeEffect
+      ? () => {
+          swipeEffect.unloadAsync();
+          console.log("unload");
+        }
+      : undefined;
+  }, [indexScroll]);
+
   return (
     <View style={styles.rootView}>
       <Animated.FlatList
@@ -37,8 +79,9 @@ const SecondBannerOrganism = () => {
         snapToInterval={ITEM_SIZE}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-          { useNativeDriver: true }
-        )}
+          { useNativeDriver: true },
+        
+        )  }
         onMomentumScrollEnd={(ev) => {
           const index = Math.round(ev.nativeEvent.contentOffset.x / ITEM_SIZE);
           setIndex(index);
@@ -70,9 +113,14 @@ const SecondBannerOrganism = () => {
                 transform: [{ scale }],
               }}
             >
-              <TouchableWithoutFeedback>
+              <TouchableWithoutFeedback
+                onPress={() => {
+                  // Linking.openURL(item.linking),
+                  playSound();
+                }}
+              >
                 <Image
-                  source={{ uri: item.image }}
+                  source={item.image}
                   style={{
                     width: ITEM_SIZE,
                     height: ITEM_HEIGHT,
@@ -84,26 +132,27 @@ const SecondBannerOrganism = () => {
         }}
       />
       <View style={{ flexDirection: "row" }}>
-        { dataEvent.length > 0 &&  dataEvent?.map((item, index) => {
-          return (
-            <View
-              key={item.id}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            >
+        {dataEvent.length > 0 &&
+          dataEvent?.map((item, index) => {
+            return (
               <View
-                style={[
-                  styles.pagingNation,
-                  {
-                    backgroundColor:
-                      index === indexScroll
-                        ? theme.colors.searchBar
-                        : "transparent",
-                  },
-                ]}
-              />
-            </View>
-          );
-        })}
+                key={item.id}
+                style={{ justifyContent: "center", alignItems: "center" }}
+              >
+                <View
+                  style={[
+                    styles.pagingNation,
+                    {
+                      backgroundColor:
+                        index === indexScroll
+                          ? theme.colors.searchBar
+                          : "transparent",
+                    },
+                  ]}
+                />
+              </View>
+            );
+          })}
       </View>
       <View
         style={{
@@ -151,5 +200,10 @@ const rootStyles = (theme: AppTheme) =>
       borderColor: theme.colors.searchBar,
       marginHorizontal: 7,
     },
-    arrowStyle: { width: 25, height: 25, tintColor: theme.colors.primary,marginTop:10 },
+    arrowStyle: {
+      width: 25,
+      height: 25,
+      tintColor: theme.colors.primary,
+      marginTop: 10,
+    },
   });

@@ -6,6 +6,7 @@ import { AppTheme, useTheme } from "../../../theme";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { TabItemsProps } from "./../../molecules/tabItem/type";
 import { TabItems } from "../../molecules/tabItem/tabItems";
+import { onClick } from "@app/components/molecules/soundEffect/click";
 
 const BottomBar = (props: BottomTabBarProps) => {
   const { state, navigation } = props;
@@ -13,7 +14,7 @@ const BottomBar = (props: BottomTabBarProps) => {
   const pressNavigateTab = React.useCallback(
     (curTab: any) => async () => {
       const previousRouteName = navigationRef?.current?.getCurrentRoute()?.name;
-      // const currentRouteName = state.routes[curTab].name;
+      onClick()
       navigation.navigate(state.routes[curTab].name);
     },
     [navigation, state]

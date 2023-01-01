@@ -1,11 +1,9 @@
-import { Platform, StyleSheet, View,Image } from "react-native";
+import {  StyleSheet, View, Image } from "react-native";
 import React from "react";
 import { isEqual } from "lodash";
 import { AppTheme, useTheme } from "@app/theme";
 import { Text } from "@app/components/atoms/text";
 import { images } from "@app/assets/images";
-import { width } from '@app/ultils/type';
-
 
 
 const FirstBannerOrganism = () => {
@@ -17,34 +15,48 @@ const FirstBannerOrganism = () => {
       <View style={styles.contentView}>
         <View style={styles.textView}>
           <View style={styles.firstText}>
-            <Text fontSize={16}>Cùng Board game </Text>
-            <Text
-              fontSize={18}
-              color={theme.colors.primary}
-              fontWeight="800"
-              fontFamily={Platform.OS === "ios" ? "bold" : "primary"}
-              //   fontWeight=''
-            >
-              MIỀN NGƯỢC
+            <Text fontSize={13.5} fontWeight="400" color={theme.colors.primary}>
+              Trải nghiệm khám phá vùng sơn cước
+            </Text>
+            <Text textAlign="center" fontSize={13.5}>
+              cùng Board game
             </Text>
           </View>
 
-          <View>
-            <Text fontSize={16}>Trải nghiệm khám phá </Text>
-            <Text fontSize={16}>vùng sơn cước </Text>
+          <View style={{
+            zIndex:100000,
+            position: "absolute",
+            top:16,
+            left:23,
+            paddingHorizontal:5,
+            
+          }}>
+            <Image
+              source={images.firstBanner}
+              style={{
+                width:200,
+                height: 138,
+                padding:2
+              
+                // zIndex:10000
+              }}
+              resizeMode="contain"
+            />
           </View>
         </View>
-        <View style={{
-            // backgroundColor:'red'
-        }}>
-            <Image
+        <View
+          style={{
+            // backgroundColor:'red',
+            zIndex: -100,
+          }}
+        >
+          <Image
             source={images.imageHome}
             style={styles.imageStyle}
-            resizeMode={'center'}
-            />
+            resizeMode={"contain"}
+          />
         </View>
       </View>
-      
     </View>
   );
 };
@@ -63,17 +75,27 @@ const rootStyles = (theme: AppTheme) =>
       flexDirection: "row",
       borderBottomWidth: 2,
       borderBottomColor: theme.colors.searchBar,
-      zIndex:1000
+      zIndex: 1000,
     },
     textView: {
       marginVertical: 43,
-      marginLeft: 16,
+      // marginLeft: 16,
     },
     firstText: {
       marginBottom: 20,
+      position: "absolute",
+      zIndex: 1000,
+      top: -30,
+      left: 5,
     },
-    imageStyle:{
-        width:174,
-        height:174 * (221/174)
-    }
+    imageStyle: {
+      width: 175,
+      height: 174 * (221 / 174),
+      bottom: 5,
+      // backgroundColor:'red',
+      left: 210,
+      zIndex: -1,
+      // right:10
+      // marginRight:10
+    },
   });

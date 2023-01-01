@@ -13,7 +13,7 @@ import { Items } from "@app/ultils/type";
 import { useTheme, AppTheme } from "@app/theme";
 import { navigate } from "@app/navigation/navigation-services";
 import { APP_SCREEN } from "@app/navigation/screen-type";
-
+import { Audio } from "expo-av";
 interface ListItemsProps {
   items: Items[];
 }
@@ -21,6 +21,10 @@ interface ListItemsProps {
 const ListItemsOrganism = ({ items }: ListItemsProps) => {
   const theme = useTheme();
   const styles = rootStyles(theme);
+  const onClick = async() =>{
+    const {sound} = await Audio.Sound.createAsync(require('../../../../assets/sound/click.mp3'))
+    return await sound.playAsync()
+  }
   return (
     <ScrollView
       style={{
@@ -34,7 +38,11 @@ const ListItemsOrganism = ({ items }: ListItemsProps) => {
               <TouchableOpacity
                 style={{ flexDirection: "row", margin: 11 }}
                 onPress={() =>
-                  navigate(APP_SCREEN.DETAIL_ITEMS, { items: item })
+                  {
+                    onClick()
+                    navigate(APP_SCREEN.DETAIL_ITEMS, { items: item })
+                  }
+                  // console.log(item.obtain)
                 }
               >
                 <ImageBackground

@@ -1,14 +1,17 @@
+import { RootState } from "@app/assets/store/store";
+import { MapOrganisms } from "@app/components/organisms/mapOrganisms";
+import { useTheme } from "@app/theme";
 import React from "react";
-import { View } from "react-native";
+import { useSelector } from "react-redux";
 
-import { useTheme } from "../../../../theme";
 
-import { MapOrganisms } from "../../../organisms/mapOrganisms";
+
 
 const GuideScreens = () => {
   const theme = useTheme();
-
-  return <MapOrganisms theme={theme} />;
+  const location = useSelector<RootState,any>(state => state.app.dataLocation)
+  console.log(location,'map1')
+  return <MapOrganisms theme={theme} location={location} />;
 };
 
 export const Guide = React.memo(GuideScreens);
